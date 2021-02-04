@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<<<<<<< HEAD
-인덱스 화면zzz
+인덱스 화면
 </body>
 </html>
