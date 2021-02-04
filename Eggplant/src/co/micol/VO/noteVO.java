@@ -2,7 +2,7 @@ package co.micol.VO;
 
 public class noteVO {
 	private String tId;
-	private String nTitle;
+	private String nTItle;
 	private String nContent;
 	private String fId;
 	
@@ -18,12 +18,12 @@ public class noteVO {
 		this.tId = tId;
 	}
 
-	public String getnTitle() {
-		return nTitle;
+	public String getnTItle() {
+		return nTItle;
 	}
 
-	public void setnTitle(String nTitle) {
-		this.nTitle = nTitle;
+	public void setnTItle(String nTItle) {
+		this.nTItle = nTItle;
 	}
 
 	public String getnContent() {
@@ -41,7 +41,4 @@ public class noteVO {
 	public void setfId(String fId) {
 		this.fId = fId;
 	}
-	
-	
-
 }
