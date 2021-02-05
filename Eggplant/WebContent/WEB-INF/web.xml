@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>Eggplant</display-name>
-  
-    <servlet>
-  	<servlet-name>productServlet</servlet-name>
-  	<servlet-class>co.micol.test.servlet.productServlet</servlet-class>
- 	 </servlet>
-  
-  <servlet-mapping>
-  	<servlet-name>productServlet</servlet-name>
-  	<url-pattern>*.a</url-pattern>
-  </servlet-mapping>
-  
+
   
     <servlet>
   	<servlet-name>FrontController</servlet-name>

@@ -32,7 +32,7 @@ public class productServlet extends HttpServlet {
         int i=1;
         for(productVO pro:list) {
         	jsonFile +="{";
-        	jsonFile += "\"pName\":"+ pro.getpName()+"";
+        	jsonFile += "\"pName\":\""+ pro.getpName()+"\"";
 			jsonFile +=",\"pModel\":\""+pro.getpModel()+"\"";
 			jsonFile +=",\"pImage\":\""+pro.getpImage()+"\"";
 			jsonFile +=",\"pAgency\":\""+pro.getpAgency()+"\"";
