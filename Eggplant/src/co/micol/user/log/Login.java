@@ -28,7 +28,8 @@ public class Login implements Command {
 		session.setAttribute("mId", vo.getmId());
 		session.setAttribute("mPassword", vo.getmPassword());
 		session.setAttribute("mAuth", vo.getmAuth());
-		// 성공페이지 실패 페이지 설정하기
+		// 유저 or 관리자로그인 실패 순서 설정하기 
+		//비교연산자로 null대신에 == 하고 getmAuth값이 USER,ADMIN인 것만으로 바꾸고 싶음
 		if (vo.getmAuth() != null) {
 			viewPage = "";
 		} else {
