@@ -23,9 +23,11 @@ public class memberDAO extends DAO {
 			while (rs.next()) {
 				vo = new memberVO();
 				vo.setmId(rs.getString("mId"));
+				vo.setmPassword(rs.getString("mPassword"));
 				vo.setmName(rs.getString("mName"));
 				vo.setmBirth(rs.getString("mBirth"));
 				vo.setmAuth(rs.getString("mAuth"));
+				vo.setmNumber(rs.getString("mNumber"));
 				vo.setmAccount(rs.getString("mAccount"));
 				list.add(vo);
 			}

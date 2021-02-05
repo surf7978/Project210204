@@ -15,12 +15,15 @@
 
     <!-- Custom fonts for this template-->
     <link href="startbootstrap-sb-admin-2-gh-pages/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="startbootstrap-sb-admin-2-gh-pages/css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="startbootstrap-sb-admin-2-gh-pages/css/menu_style.css"> <!-- Resource style -->
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="startbootstrap-sb-admin-2-gh-pages/css/sb-admin-2.css" rel="stylesheet">
+	<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 </head>
 
@@ -152,7 +155,7 @@
             
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="userList.do">
                     <i class="fas fa-fw fa-table"></i>
                     <span>회원목록</span></a>
             </li>
@@ -296,7 +299,7 @@
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                        <img class="rounded-circle" src="startbootstrap-sb-admin-2-gh-pages/img/undraw_profile_1.svg"
                                             alt="">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
@@ -354,7 +357,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">멤버명</span>
                                 <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                    src="startbootstrap-sb-admin-2-gh-pages/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
 
