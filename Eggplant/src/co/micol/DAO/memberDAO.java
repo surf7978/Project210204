@@ -38,7 +38,7 @@ public class memberDAO extends DAO {
 
 //선택조회
 	public memberVO select(memberVO vo) {
-		String sql = "SELECT * FROM member WHERE mid=? and mPassword";
+		String sql = "SELECT * FROM member WHERE mid=? and mPassword=?";
 		try {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, vo.getmId());
