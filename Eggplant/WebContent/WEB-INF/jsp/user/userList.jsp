@@ -100,6 +100,8 @@
 				console.log('ajax GET 통신 성공');
 				for (let i = 0; i < result.length; i++) {
 	                let tr = document.createElement('tr');
+	                console.log(result[i]);
+	                tr.setAttribute("name", result[i].mId);
 	                let tbody = document.getElementById("show").append(tr);
 	                console.log(result[i]);
 	                for(filed in result[i]){	    

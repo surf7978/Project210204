@@ -16,6 +16,7 @@ import co.micol.text.TextView;
 import co.micol.user.join.IdCheck;
 import co.micol.user.join.SignUp;
 import co.micol.user.join.SignUpForm;
+import co.micol.user.log.AdminDashBoard;
 import co.micol.user.log.Login;
 import co.micol.user.log.UserList;
 
@@ -42,6 +43,7 @@ public class FrontController extends HttpServlet {
 		map.put("/textView.do", new TextView());
 			
 		map.put("/userList.do", new UserList());
+		map.put("/adminDashBoard.do", new AdminDashBoard());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -167,9 +167,27 @@
 			</nav> <!-- .cd-dropdown -->
 		</div> <!-- .cd-dropdown-wrapper -->
 	</header>
+
+<!-- Bootstrap core JavaScript-->
+	<script src="startbootstrap-sb-admin-2-gh-pages/vendor/jquery/jquery.min.js"></script>
+	<script src="startbootstrap-sb-admin-2-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Core plugin JavaScript-->
+	<script src="startbootstrap-sb-admin-2-gh-pages/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<!-- Custom scripts for all pages-->
+	<script src="startbootstrap-sb-admin-2-gh-pages/js/sb-admin-2.min.js"></script>
+
+	<!-- Page level plugins -->
+	<script src="startbootstrap-sb-admin-2-gh-pages/vendor/chart.js/Chart.min.js"></script>
+
+	<!-- Page level custom scripts -->
+	<script src="startbootstrap-sb-admin-2-gh-pages/js/demo/chart-area-demo.js"></script>
+	<script src="startbootstrap-sb-admin-2-gh-pages/js/demo/chart-pie-demo.js"></script>
 	
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->
-<script src="js/main.js"></script> <!-- Resource jQuery -->
+		
+<script src="startbootstrap-sb-admin-2-gh-pages/js/jquery-2.1.1.js"></script>
+<script src="startbootstrap-sb-admin-2-gh-pages/js/jquery.menu-aim.js"></script> <!-- menu aim -->
+<script src="startbootstrap-sb-admin-2-gh-pages/js/main.js"></script> <!-- Resource jQuery -->
 </body>
 </html>
