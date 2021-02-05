@@ -120,6 +120,27 @@ public class memberDAO extends DAO {
 		return n;
 	}
 
+	public int isIdCheck(String id) {
+		int cnt = 0;
+		String sql = "SELECT MID FROM MEMBER WHERE MID = ?";
+
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+			if (rs.next()) {
+				cnt = 1;// 아이디 있으면 1
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("아이디 중복확인 실패");
+		} finally {
+			close();
+		}
+		return cnt;
+	}
+
+//닫기
 	private void close() {
 		try {
 			conn.close();
