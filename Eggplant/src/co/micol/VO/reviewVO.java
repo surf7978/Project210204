@@ -5,6 +5,8 @@ public class reviewVO {
 	private String rTitle;
 	private String rCountent;
 	private int rScope;
+	
+	
 	public reviewVO() {
 		// TODO Auto-generated constructor stub
 	}
