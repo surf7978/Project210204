@@ -14,11 +14,6 @@ body {
   background-color: #ffffff;
 }
 
-a {
-  color: #d30074;
-  text-decoration: none;
-}
-a:hover{text-decoration: none;color:#fff;}
 img {
   max-width: 100%;
 }
