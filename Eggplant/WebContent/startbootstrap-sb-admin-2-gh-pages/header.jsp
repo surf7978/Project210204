@@ -21,7 +21,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.css" rel="stylesheet">
-
+	<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body id="page-top">
@@ -139,9 +139,19 @@
             
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="member.jsp">
                     <i class="fas fa-fw fa-table"></i>
                     <span>회원목록</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="product.jsp">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>제품목록</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="product.jsp">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>공지사항</span></a>
             </li>
 
             <!-- Divider -->
@@ -371,9 +381,6 @@
                             <a class="collapse-item" href="login.jsp" >로그인</a>
                         </div>
                             <div class="topbar-divider d-none d-sm-block"></div>
-                        <div style="padding-top: 20px;">
-                            <a class="collapse-item" href="register.jsp">회원가입</a>
-                        </div>
                     </ul>
 
                 </nav>
