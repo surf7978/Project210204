@@ -9,9 +9,9 @@
 	<div class="container-fluid">
 
 		<!-- Page Heading -->
-		<h1 class="h3 mb-2 text-gray-800">Product</h1>
+		<h1 class="h3 mb-2 text-gray-800">Member</h1>
 		<p class="mb-4">
-			제품목록
+			회원관리
 		</p>
 
 		<!-- DataTales Example -->
@@ -26,12 +26,13 @@
 						cellspacing="0">
 						<thead>
 							<tr>
-								<th>제품이름</th>
-								<th>제조사</th>
-								<th>이미지</th>
-								<th>통신사</th>
-								<th>색상</th>
-								<th>용량</th>
+								<th>아이디</th>
+								<th>비밀번호</th>
+								<th>이름</th>
+								<th>생년월일</th>
+								<th>권한</th>
+								<th>전화번호</th>
+								<th>계좌번호</th>
 							</tr>
 						</thead>
 						<tbody id="show">
@@ -123,7 +124,7 @@
 	$(function(){
 		$.ajax({		
 			type:'post',
-			url:'<%=request.getContextPath()%>/productServlet',
+			url:'<%=request.getContextPath()%>/memberList',
 			dataType : "json",
 			success : function(result) {
 				console.log(result);

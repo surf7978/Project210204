@@ -1,4 +1,4 @@
-package co.micol.test.servlet;
+package co.micol.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
