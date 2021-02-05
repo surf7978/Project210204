@@ -15,6 +15,13 @@ public class AdminMemberInsert implements Command {
 		memberDAO dao = new memberDAO();
 		memberVO vo = new memberVO();
 
+		vo.setmId(request.getParameter("mId"));
+		vo.setmPassword(request.getParameter("mPassword"));
+		vo.setmName(request.getParameter("mName"));
+		vo.setmBirth(request.getParameter("mBirth"));
+		vo.setmNumber(request.getParameter("mNumber"));
+		vo.setmAccount(request.getParameter("mAccount"));
+
 		int n = dao.insert(vo);
 		String viewPage = null;
 
