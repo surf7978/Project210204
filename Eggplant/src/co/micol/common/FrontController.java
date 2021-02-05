@@ -23,7 +23,8 @@ public class FrontController extends HttpServlet {
     }
 
 	public void init(ServletConfig config) throws ServletException {
-		map.put("/main.do", new Main());
+		map.put("/loading.do", new Loading());
+		map.put("/loginForm.do", new LoginForm());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

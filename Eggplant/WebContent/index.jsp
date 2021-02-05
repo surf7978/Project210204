@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-인덱스 화면
+<jsp:forward page="loading.do" />
 </body>
 </html>
