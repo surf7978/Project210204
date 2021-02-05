@@ -38,7 +38,7 @@ public class memberDAO extends DAO {
 
 //선택조회
 	public memberVO select(memberVO vo) {
-		String sql = "SELECT * FROM member WHERE mid=? and mPassword=?";
+		String sql = "SELECT * FROM member WHERE mid=? and mPassword";
 		try {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, vo.getmId());
@@ -120,26 +120,6 @@ public class memberDAO extends DAO {
 		return n;
 	}
 
-//아이디 채크
-	public int isIdCheck(String id) {
-		int cnt = 0;
-		String sql = "SELECT MID FROM MEMBER WHERE MID=?";
-		try {
-			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, id);
-			rs = psmt.executeQuery();
-			if (rs.next()) {
-				cnt = 1;
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			close();
-		}
-		return cnt;
-	}
-
-//닫기
 	private void close() {
 		try {
 			conn.close();

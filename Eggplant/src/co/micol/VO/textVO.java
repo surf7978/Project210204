@@ -13,7 +13,8 @@ public class textVO {
 	private int tDiscount;
 	private int tViews;
 	private int tLikes;
-	public String gettNumber() {
+	public String gettNumber(
+			) {
 		return tNumber;
 	}
 	public void settNumber(String tNumber) {
