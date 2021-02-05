@@ -15,7 +15,7 @@ public class IdCheck implements Command {
 		int cnt = 0;
 		// 중복채크 눌렀을 때 받아오는 name값
 		String id = request.getParameter("id");
-		cnt = dao.isIdCheck(id);
+		//cnt = dao.isIdCheck(id);
 		
 		String msg = null;
 		if (cnt == 1) {
