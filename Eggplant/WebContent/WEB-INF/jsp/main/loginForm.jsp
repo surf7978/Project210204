@@ -19,7 +19,7 @@
                                         <h1 class="h4 text-gray-900 mb-4">로그인 화면</h1>
                                     </div>
                                     
-                                    <form action="login.do" method="post">
+                                    <form class="user" action="login.do" method="post">
                                     
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"

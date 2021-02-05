@@ -1,65 +1,89 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <jsp:include page="../main/main.jsp" />
-	 <div class="container">
+
+
+	<div class="container">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <!-- <div class="col-lg-5 d-none d-lg-block bg-register-image"></div> -->
-                    <div class="col-lg-12">
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">회원가입</h1>
+                                <h1 class="h4 text-gray-900 mb-4">판매글 등록</h1>
                             </div>
                             <form class="user">
                                 <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" name="exampleFirstName"
-                                            placeholder="아이디 입력">
-                                    </div>
-                                    <div>
-                                        <a href="idCheck.do" class="btn btn-facebook btn-user btn-block">
-                                            중복체크
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                            placeholder="패스워드 입력">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                            placeholder="패스워드 확인">
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="이름 입력">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="생년월일 입력">
+                                    <div class="col-sm-12 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                            placeholder="제목 입력">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-12 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="주소 입력">
+                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                            placeholder="내용 입력">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                            placeholder="판매가격 입력">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                            placeholder="판매지역 입력">
                                     </div>
                                 </div>
                                 <hr>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
-                                    가입하기
-                                </a>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                            placeholder="통신사">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                            placeholder="제조사">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                        placeholder="품명">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                            placeholder="용량">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user"
+                                            id="exampleInputPassword" placeholder="색상">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="hidden" class="form-control form-control-user"
+                                            id="exampleRepeatPassword" placeholder="Repeat Password">
+                                    </div>
+                                </div>
                                 <hr>
-                                <a href="loginForm.do" class="btn btn-google btn-user btn-block">
-                                    로그인
-                                </a>
+                                <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                        판매글 등록
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <a href="index.html" class="btn btn-google btn-user btn-block">
+                                        뒤로가기
+                                    </a>
+                                </div>
+                                 </div>
+                                <hr>
                                 
                             </form>
                         </div>
