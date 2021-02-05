@@ -37,7 +37,7 @@
 								<th>Salary</th>
 							</tr>
 						</thead>
-						<tbody>
+						<tbody id="show">
 							<tr>
 								<td>Tiger Nixon</td>
 								<td>System Architect</td>
@@ -137,6 +137,15 @@
 			url:'<%=request.getContextPath()%>/productServlet',
 			dataType : "json",
 			success : function(result) {
+				for (let i = 0; i < result.length; i++) {
+	                let tr = document.createElement('tr');
+	                let tbody = document.getElementById("show").append(tr);
+	                for(let j =0;j<result[i].childNodes.length; j++){
+	                	let td = document.createElement('td');
+	                	td.innerHTML = result[i].childNodes[j].childNodes[0].nodeValue;
+                        tr.appendChild(td);	                	
+	                }
+                }
 				console.log(result);
 				console.log('ajax GET 통신 성공');
 			}
