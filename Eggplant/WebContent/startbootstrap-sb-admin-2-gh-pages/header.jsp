@@ -21,7 +21,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.css" rel="stylesheet">
-
+	<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body id="page-top">
