@@ -5,6 +5,8 @@ public class basketVO {
 	private String bName;
 	private String bNumber;
 	private String bTitle;
+	private String bImage;
+	private String bModel;
 	private String bPrice;
 	private String bId;
 	
@@ -36,6 +38,22 @@ public class basketVO {
 		this.bTitle = bTitle;
 	}
 
+	public String getbImage() {
+		return bImage;
+	}
+
+	public void setbImage(String bImage) {
+		this.bImage = bImage;
+	}
+
+	public String getbModel() {
+		return bModel;
+	}
+
+	public void setbModel(String bModel) {
+		this.bModel = bModel;
+	}
+
 	public String getbPrice() {
 		return bPrice;
 	}
@@ -51,4 +69,6 @@ public class basketVO {
 	public void setbId(String bId) {
 		this.bId = bId;
 	}
+
+	
 }
