@@ -38,17 +38,20 @@ public class memberDAO extends DAO {
 
 //선택조회
 	public memberVO select(memberVO vo) {
-		String sql = "SELECT * FROM member WHERE mid=?";
+		String sql = "SELECT * FROM member WHERE mid=? and mPassword";
 		try {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, vo.getmId());
+			psmt.setString(2, vo.getmPassword());
 			rs = psmt.executeQuery();
 			if (rs.next()) {
 				vo.setmId(rs.getString("mId"));
 				vo.setmName(rs.getString("mName"));
+				vo.setmPassword(rs.getString("mPassword"));
 				vo.setmBirth(rs.getString("mBirth"));
 				vo.setmAuth(rs.getString("mAuth"));
 				vo.setmAccount(rs.getString("mAccount"));
+				vo.setmNumber(rs.getString("mNumber"));
 			}
 		} catch (Exception e) {
 		} finally {
