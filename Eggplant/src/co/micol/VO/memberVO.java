@@ -70,5 +70,13 @@ public class memberVO {
 		this.mAccount = mAccount;
 	}
 
+	@Override
+	public String toString() {
+		return "memberVO [mId=" + mId + ", mPassword=" + mPassword + ", mName=" + mName + ", mBirth=" + mBirth
+				+ ", mAuth=" + mAuth + ", mNumber=" + mNumber + ", mAccount=" + mAccount + "]";
+	}
+	
+	
+
 }
 

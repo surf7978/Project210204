@@ -18,9 +18,11 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">로그인 화면</h1>
                                     </div>
-                                    <form class="user">
+                                    
+                                    <form action="login.do" method="post">
+                                    
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
+                                            <input type="text" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
                                                 placeholder="아이디 입력">
                                         </div>
@@ -34,9 +36,9 @@
                                                 <label class="custom-control-label" for="customCheck">아이디 저장</label>
                                             </div>
                                         </div>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">
                                             로그인
-                                        </a>
+                                        </button>
                                         <hr>
                                         <a href="index.html" class="btn btn-google btn-user btn-block">
                                             <!-- <i class="fab fa-google fa-fw"></i> --> 회원가입

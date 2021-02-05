@@ -15,7 +15,7 @@ public class Logout implements Command {
 		session.invalidate();
 
 		// 경로 main.do 만들고 적용하기
-		return "#";
+		return "main/main.do";
 	}
 
 }

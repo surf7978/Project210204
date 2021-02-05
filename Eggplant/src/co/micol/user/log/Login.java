@@ -17,9 +17,11 @@ public class Login implements Command {
 		memberVO vo = new memberVO();
 
 		// JSP 로그인 페이지에서 설정한 name값 채크하기
-		vo.setmId(request.getParameter("mId"));
-		vo.setmPassword(request.getParameter("mPassword"));
-
+		vo.setmId(request.getParameter("exampleInputEmail"));
+		vo.setmPassword(request.getParameter("exampleInputPassword"));
+		
+		System.out.println(vo.toString());
+		
 		vo = dao.select(vo);
 
 		String viewPage = null;
@@ -28,11 +30,13 @@ public class Login implements Command {
 		session.setAttribute("mId", vo.getmId());
 		session.setAttribute("mPassword", vo.getmPassword());
 		session.setAttribute("mAuth", vo.getmAuth());
+		
+		
 		// 성공페이지 실패 페이지 설정하기
 		if (vo.getmAuth() != null) {
-			viewPage = "";
-		} else {
-			viewPage = "";
+			viewPage = "main/loginSuccess";
+		}else {
+			viewPage = "main/loginFail";
 		}
 
 		return viewPage;
