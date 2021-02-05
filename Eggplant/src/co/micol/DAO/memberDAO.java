@@ -120,6 +120,7 @@ public class memberDAO extends DAO {
 		return n;
 	}
 
+//아이디채크
 	public int isIdCheck(String id) {
 		int cnt = 0;
 		String sql = "SELECT MID FROM MEMBER WHERE MID = ?";
