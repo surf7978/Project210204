@@ -368,11 +368,11 @@
                         </li>
                         <div class="topbar-divider d-none d-sm-block"></div>
                         <div style="padding-top: 20px;">
-                            <a class="collapse-item" href="login.jsp" >로그인</a>
+                            <a class="collapse-item" href="loginForm.do" >로그인</a>
                         </div>
                             <div class="topbar-divider d-none d-sm-block"></div>
                         <div style="padding-top: 20px;">
-                            <a class="collapse-item" href="register.jsp">회원가입</a>
+                            <a class="collapse-item" href="signUpForm.do">회원가입</a>
                         </div>
                     </ul>
 

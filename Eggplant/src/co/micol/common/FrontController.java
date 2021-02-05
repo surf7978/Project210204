@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import co.micol.user.join.SignUp;
+import co.micol.user.join.SignUpForm;
+
 
 @WebServlet("/FrontController")
 public class FrontController extends HttpServlet {
@@ -25,6 +28,8 @@ public class FrontController extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		map.put("/loading.do", new Loading());
 		map.put("/loginForm.do", new LoginForm());
+		map.put("/signUpForm.do", new SignUpForm());
+		map.put("/signUp.do", new SignUp());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
