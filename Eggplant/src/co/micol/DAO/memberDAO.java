@@ -35,6 +35,7 @@ public class memberDAO extends DAO {
 		}
 		return list;
 	}
+
 //관리자 조회
 	public memberVO adminSelect(memberVO vo) {
 		String sql = "SELECT * FROM member WHERE mid=?";
@@ -56,6 +57,27 @@ public class memberDAO extends DAO {
 			close();
 		}
 		return vo;
+	}
+
+// 관리자-수정
+	public int adminUpdate(memberVO vo) { // 아이디, 이름, 생년월일 제외 / 권한은 관리자만 수정
+		String sql = "UPDATE member SET mpassword=?, mauth=?, mnumber=?, maccount=? WHERE mid=?";
+		int n = 0;
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getmPassword());
+			psmt.setString(2, vo.getmAuth());
+			psmt.setString(3, vo.getmNumber());
+			psmt.setString(4, vo.getmAccount());
+			psmt.setString(5, vo.getmId());
+			n = psmt.executeUpdate();
+			System.out.println(n + "건 업데이트.");
+		} catch (Exception e) {
+		} finally {
+			close();
+		}
+
+		return n;
 	}
 
 //선택조회-로그인시 id,pw채크용
