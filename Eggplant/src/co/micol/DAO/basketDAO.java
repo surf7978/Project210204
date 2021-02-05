@@ -15,14 +15,28 @@ public class basketDAO extends DAO {
 //전체조회	
 	public ArrayList<basketVO> selectList(){
 		String sql="SELECT * FROM basket";
+		ArrayList<basketVO> list = new ArrayList<basketVO>();
+		basketVO vo;
 		try {
 			psmt = conn.prepareStatement(sql);
-
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				vo = new basketVO();
+				vo.setbName(rs.getString("bName"));
+				vo.setbNumber(rs.getString("bNumber"));
+				vo.setbTitle(rs.getString("bTitle"));
+				vo.setbImage(rs.getString("bImage"));
+				vo.setbModel(rs.getString("bModel"));
+				vo.setbPrice(rs.getString("bPrice"));
+				vo.setbId(rs.getString("bId"));
+				list.add(vo);				
+			}
+			
 		} catch (Exception e) {
 		} finally {
 			close();
 		}
-		return null;
+		return list;
 		
 	}
 	
@@ -31,12 +45,23 @@ public class basketDAO extends DAO {
 		String sql="SELECT * FROM basket WHERE bnumber=?";
 		try {
 			psmt = conn.prepareStatement(sql);
-
+			psmt.setString(1, vo.getbNumber());
+			rs = psmt.executeQuery();
+			if(rs.next()) {
+				vo = new basketVO();
+				vo.setbName(rs.getString("bName"));
+				vo.setbNumber(rs.getString("bNumber"));
+				vo.setbTitle(rs.getString("bTitle"));
+				vo.setbImage(rs.getString("bImage"));
+				vo.setbModel(rs.getString("bModel"));
+				vo.setbPrice(rs.getString("bPrice"));
+				vo.setbId(rs.getString("bId"));				
+			}
 		} catch (Exception e) {
 		} finally {
 			close();
 		}
-		return null;
+		return vo;
 	}
 
 	
