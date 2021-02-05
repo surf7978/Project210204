@@ -35,8 +35,30 @@ public class memberDAO extends DAO {
 		}
 		return list;
 	}
+//관리자 조회
+	public memberVO adminSelect(memberVO vo) {
+		String sql = "SELECT * FROM member WHERE mid=?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getmId());
+			rs = psmt.executeQuery();
+			if (rs.next()) {
+				vo.setmId(rs.getString("mId"));
+				vo.setmName(rs.getString("mName"));
+				vo.setmPassword(rs.getString("mPassword"));
+				vo.setmBirth(rs.getString("mBirth"));
+				vo.setmAuth(rs.getString("mAuth"));
+				vo.setmAccount(rs.getString("mAccount"));
+				vo.setmNumber(rs.getString("mNumber"));
+			}
+		} catch (Exception e) {
+		} finally {
+			close();
+		}
+		return vo;
+	}
 
-//선택조회
+//선택조회-로그인시 id,pw채크용
 	public memberVO select(memberVO vo) {
 		String sql = "SELECT * FROM member WHERE mid=? and mPassword = ?";
 		try {
