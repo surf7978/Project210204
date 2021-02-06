@@ -17,6 +17,7 @@
     <link href="startbootstrap-sb-admin-2-gh-pages/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="startbootstrap-sb-admin-2-gh-pages/css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="startbootstrap-sb-admin-2-gh-pages/css/menu_style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -40,7 +41,7 @@
                 <div class="sidebar-brand-icon rotate-n-19">
                     <i class="fas fa-pepper-hot"></i>
                 </div>
-                <div style="padding-top:10px;"><h4><div class="sidebar-brand-text mx-3">가<sup>지</sup>마<sup>켓</sup></div></h4></div>
+                <div style="padding-top:10px;" id="logo"><h4><div class="sidebar-brand-text mx-3" ><img src="image/logo.png" /></div></h4></div>
             </a>
 
             <!-- Divider -->
