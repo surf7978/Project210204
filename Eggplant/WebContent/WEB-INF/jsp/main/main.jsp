@@ -36,7 +36,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="main.do">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="loginForm.do">
                 <div class="sidebar-brand-icon rotate-n-19">
                     <i class="fas fa-pepper-hot"></i>
                 </div>
@@ -49,7 +49,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="loginForm.do">
                     <i class="fas fa-home"></i>
                     <span>홈</span></a>
             </li>
@@ -115,14 +115,9 @@
             </a>
             <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Login Screens:</h6>
-                    <a class="collapse-item" href="login.html">Login</a>
-                    <a class="collapse-item" href="register.html">Register</a>
-                    <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                    <div class="collapse-divider"></div>
-                    <h6 class="collapse-header">Other Pages:</h6>
-                    <a class="collapse-item" href="404.html">404 Page</a>
-                    <a class="collapse-item" href="blank.html">Blank Page</a>
+                    <a class="collapse-item" href="frequentlyQuestion.do">자주 묻는 질문</a>
+                    <a class="collapse-item" href="QnAList.do">Q & A</a>
+                    <a class="collapse-item" href="reportList.do">신고 센터</a>
                 </div>
             </div>
         </li>
@@ -156,7 +151,11 @@
 
             <!-- Sidebar Message -->
             <div class="sidebar-card">
-                <h1>광고쓰</h1>
+           		<br/><br/>
+                <h1 style="font-size: 25px;">광고 문의</h1>
+                <br/><br/>
+                <h2>Eggplant@naver.com</h2>
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             </div>
 
         </ul>
@@ -265,7 +264,7 @@
                                         Spending Alert: We've noticed unusually high spending for your account.
                                     </div>
                                 </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">모든 알림 내역</a>
+                                <a class="dropdown-item text-center small text-gray-500" href="noticeList.do">모든 알림 내역</a>
                             </div>
                         </li>
 
@@ -331,7 +330,7 @@
                                         <div class="small text-gray-500">Chicken the Dog · 2w</div>
                                     </div>
                                 </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">모든 메세지 내역</a>
+                                <a class="dropdown-item text-center small text-gray-500" href="noteList.do">모든 메세지 내역</a>
                             </div>
                         </li>
 
@@ -349,15 +348,15 @@
 
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="cartList.do">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    장바구니
+                                </a>
+                                <a class="dropdown-item" href="myPage.do">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     프로필
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    설정
-                                </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="noteNcommandList.do">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     활동 내역
                                 </a>

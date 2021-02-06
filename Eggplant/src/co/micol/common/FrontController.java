@@ -11,6 +11,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import co.micol.customerCenter.FrequentlyQuestion;
+import co.micol.customerCenter.QnAList;
+import co.micol.customerCenter.ReportList;
+import co.micol.my.CartList;
+import co.micol.my.MyPage;
+import co.micol.my.NoteList;
+import co.micol.my.NoteNCommandList;
+import co.micol.my.NoticeList;
 import co.micol.text.InsertText;
 import co.micol.text.TextView;
 import co.micol.user.join.IdCheck;
@@ -44,6 +52,16 @@ public class FrontController extends HttpServlet {
 			
 		map.put("/userList.do", new UserList());
 		map.put("/adminDashBoard.do", new AdminDashBoard());
+			
+		map.put("/myPage.do", new MyPage());
+		map.put("/cartList.do", new CartList());
+		map.put("/noteNcommandList.do", new NoteNCommandList());
+		map.put("/noteList.do", new NoteList());
+		map.put("/noticeList.do", new NoticeList());
+		
+		map.put("/frequentlyQuestion.do", new FrequentlyQuestion());
+		map.put("/QnAList.do", new QnAList());
+		map.put("/reportList.do", new ReportList());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
