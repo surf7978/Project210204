@@ -16,8 +16,8 @@
                             <form class="user">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" name="exampleFirstName"
-                                            placeholder="아이디 입력">
+                                        <input type="text" class="form-control form-control-user" id = "mId"
+                                        name="mId" placeholder="아이디 입력">
                                     </div>
                                     <div>
                                         <a href="idCheck.do" class="btn btn-facebook btn-user btn-block">
@@ -27,29 +27,35 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                            placeholder="패스워드 입력">
+                                        <input type="password" class="form-control form-control-user" id="mPassword"
+                                            name = "mPassword" placeholder="패스워드 입력">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                            placeholder="패스워드 확인">
+                                        <input type="password" class="form-control form-control-user" id="mPassword2"
+                                            name = "mPassword" placeholder="패스워드 확인">
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="이름 입력">
+                                            id="mName" name ="mName" placeholder="이름 입력">
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="생년월일 입력">
+                                            id="mBirth" name="mBirth" placeholder="생년월일 입력">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-12 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="주소 입력">
+                                            id="mNumber" name = "nNumber" placeholder="전화번호 입력">
+                                    </div>
+                                </div>
+                                 <div class="form-group row">
+                                    <div class="col-sm-12 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user"
+                                            id="mAccount" name = "mAccount" placeholder="전화번호 입력">
                                     </div>
                                 </div>
                                 <hr>
