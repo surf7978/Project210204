@@ -28,7 +28,7 @@ public class SignUp implements Command {
 		String viewPage = null;
 		//회원가입 성공시 페이지 설정하기
 		if (n != 0) {
-			viewPage = "";
+			viewPage = "user/signUpSuccess";
 		}
 		request.setAttribute("vo", vo);
 		return viewPage;
