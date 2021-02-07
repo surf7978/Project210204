@@ -20,7 +20,7 @@
                                         name="mId" placeholder="아이디 입력">
                                     </div>
                                     <div>
-                                        <a onclick="idCheck()" class="btn btn-facebook btn-user btn-block">
+                                        <a onclick=" idCheck()" class="btn btn-facebook btn-user btn-block">
                                             중복체크
                                         </a>
                                     </div>
