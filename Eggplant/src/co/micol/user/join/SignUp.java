@@ -17,11 +17,11 @@ public class SignUp implements Command {
 
 		// 회원가입 폼에서 submit시 오는 페이지
 		// 회원가입 폼의 name값을 참고하여 고칠부분 고치기
-		vo.setmId(request.getParameter("id"));
-		vo.setmPassword(request.getParameter("password"));
-		vo.setmName(request.getParameter("name"));
-		vo.setmBirth(request.getParameter("birth"));
-		vo.setmNumber(request.getParameter("number"));
+		vo.setmId(request.getParameter("mId"));
+		vo.setmPassword(request.getParameter("mPassword"));
+		vo.setmName(request.getParameter("mName"));
+		vo.setmBirth(request.getParameter("mBirth"));
+		vo.setmNumber(request.getParameter("mNumber"));
 		vo.setmAccount(request.getParameter("mAccount"));
 
 		int n = dao.insert(vo);
