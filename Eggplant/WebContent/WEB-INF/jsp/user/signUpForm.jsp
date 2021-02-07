@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <jsp:include page="../main/main.jsp" />
 	 <div class="container">
-
+		<form id="frm" name="frm" method="post">
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
@@ -20,7 +20,7 @@
                                         name="mId" placeholder="아이디 입력">
                                     </div>
                                     <div>
-                                        <a href="idCheck.do" class="btn btn-facebook btn-user btn-block">
+                                        <a onclick="idCheck()" class="btn btn-facebook btn-user btn-block">
                                             중복체크
                                         </a>
                                     </div>
@@ -73,7 +73,7 @@
                 </div>
             </div>
         </div>
-
+	</form>
     </div>
 
             </div>
@@ -121,7 +121,18 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
-
+	<script>
+	function idCheck() {
+		var url = "idCheck.do?mId=" + frm.mId.value;
+		if (!frm.mId.value) {
+			alert("아이디를 입력하세요.");
+			frm.mId.focus();
+		} else {
+			window.open(url, "아이디중복체크", "width=400, height=350");
+			console.log(url);
+		}
+	}
+	</script>
 </body>
 
 </html>

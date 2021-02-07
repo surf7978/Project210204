@@ -171,7 +171,7 @@ public class memberDAO extends DAO {
 //아이디채크
 	public int isIdCheck(String id) {
 		int cnt = 0;
-		String sql = "SELECT MID FROM MEMBER WHERE MID = ?";
+		String sql = "SELECT MID FROM MEMBER WHERE lower(MID) = ?";
 
 		try {
 			psmt = conn.prepareStatement(sql);
