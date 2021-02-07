@@ -16,7 +16,7 @@ public class AdminMemberView implements Command {
 		memberVO vo = new memberVO();
 
 		// JSP페이지에서 tr태그 눌렀을 때 가져올 name값 *수정 필요
-		vo.setmId(request.getParameter("id"));
+		vo.setmId(request.getParameter("mId"));
 		vo = dao.adminSelect(vo);
 
 		request.setAttribute("vo", vo);
@@ -24,7 +24,7 @@ public class AdminMemberView implements Command {
 
 		// 보여줄 상세페이지 만들고 경로 설정하기
 		if (vo.getmId() != null) {
-			viewPage = "";
+			viewPage = "admin/adminView";
 		}
 
 		return viewPage;
