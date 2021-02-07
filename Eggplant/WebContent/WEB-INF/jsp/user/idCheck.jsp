@@ -4,14 +4,10 @@
 
 	<div align="center">
 		<h3>${msg}</h3>
+		<input type="button" onclick="close()" value="확인">
 	</div>
 
-            </div>
-            <!-- End of Main Content -->
-        </div>
-        <!-- End of Content Wrapper -->
 
-    </div>
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
