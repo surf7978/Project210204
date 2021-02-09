@@ -20,7 +20,7 @@
 						</div>
 						<div class="card o-hidden border-0 shadow-lg my-5">
 								<div class="card-body p-0">
-									<img src="image/${vo.productImage }" width=60% height=40%>
+									<img src="image/${vos.productImage }" width=60% height=40%>
 								</div>
 							</div>
 						<div class="form-group row">
@@ -37,44 +37,65 @@
                             <div class="text-right">
                                 <div>
                                     <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                          <input readonly style="text-align:right; background-color:white;" type="hidden" class="form-control form-control-user" id="exampleFirstName"
-                                                value="#">
-                                        </div>
-                                        <div class="col-sm-3" style="text-align: left; color:black;">
-                                            <h5>조회수&nbsp;&nbsp;:</h5>
-                                        </div>
-                                        <div class="col-sm-3" style="text-align: center; color:black;">
-                                            <h5>${vos.boardView }&nbsp;</h5>
-                                        </div>
-                                    </div>                        
-                                        </div>
+										<div class="col-sm-6 mb-3 mb-sm-0">
+											<input readonly
+												style="text-align: right; background-color: white;"
+												type="hidden" class="form-control form-control-user"
+												id="exampleFirstName" value="#">
+										</div>
+										<div class="col-sm-2">
+											<input readonly
+												style="text-align: center; background-color: white; color: #9400d3;"
+												type="text" class="form-control form-control-user"
+												id="exampleLastName" value="조회수">
+										</div>
+										<div class="col-sm-3">
+											<input type="text" class="form-control form-control-user"
+												name="memberPhoneNumber" readonly="readonly" value="${vos.boardView }">
+										</div>
+									</div>
+								</div>
                                     <div class="form-group row">
-                                     <div class="col-sm-6">
-                                            <input readonly style="text-align:center; background-color:white;" type="hidden" class="form-control form-control-user" id="exampleFirstName"
-                                                value="#">
-                                       </div>
-                                        <c:if test="${vos.tradeProcess eq 'NotComplete' }">
-                                        <div class="col-sm-1" style="text-align: center; color: red;">
-                                            <input name="tradeProcess" style="text-align:center;" value="${vos.tradeProcess }">
-                                           
-                                        </div>
-                                        </c:if>
-                                        <c:if test="${vos.tradeProcess eq 'Complete' }">
-                                        <div class="col-sm-3" style="text-align: center; color: green;">
-                                            <input name="tradeProcess" style="text-align:center;" value="${vos.tradeProcess }">
-                                        </div>
-                                        </c:if>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input readonly style="text-align:center; background-color:white;" type="hidden" class="form-control form-control-user" id="exampleFirstName"
-                                                value="#">
-                                        </div>
-                                        <div class="col-sm-6" style="text-align: right; color: black;">
-                                            <h6>작성날짜&nbsp;&nbsp;:&nbsp;&nbsp;${vos.boardDate }</h6>
-                                        </div>
-                                    </div>
+								<div class="col-sm-5 mb-3 mb-sm-0">
+									<input readonly
+										style="text-align: right; background-color: white;"
+										type="hidden" class="form-control form-control-user"
+										id="exampleFirstName" value="#">
+								</div>
+								<div class="col-sm-3">
+									<input readonly
+										style="text-align: center; background-color: white; color: #9400d3;"
+										type="text" class="form-control form-control-user"
+										id="exampleLastName" value="판매여부">
+								</div>
+								<div class="col-sm-3">
+										<label><input type="text" class="form-control form-control-user"
+										list="trade" name="tradeProcess" value="${vos.tradeProcess }" >
+										<datalist id="trade">
+										<option value="판매완료"></option>
+										<option value="판매중"></option>
+										</datalist>
+										</label>
+								</div>
+							</div>
+                                   <div class="form-group row">
+								<div class="col-sm-3 mb-3 mb-sm-0">
+									<input readonly
+										style="text-align: right; background-color: white;"
+										type="hidden" class="form-control form-control-user"
+										id="exampleFirstName">
+								</div>
+								<div class="col-sm-2">
+									<input readonly
+										style="text-align: center; background-color: white; color: #9400d3;"
+										type="text" class="form-control form-control-user"
+										id="exampleLastName" value="날짜">
+								</div>
+								<div class="col-sm-6">
+									<input type="text" class="form-control form-control-user"
+										name="memberPhoneNumber" readonly="readonly" value=${vos.boardDate }>
+								</div>
+							</div>
                                 </div>
                             </div>
                                 <hr>
@@ -185,7 +206,7 @@
                                             value="첨부파일">
                                     </div>
 									<div class="col-sm-6">
-										<input type="text" class="form-control form-control-user" name="productImage" value="${vo.productImage }">											
+										<input type="text" class="form-control form-control-user" name="productImage" value="${vos.productImage }">											
 									</div>
 									<div class="col-sm-3">
 											<input type="button" class="btn btn-primary btn-user btn-block" 

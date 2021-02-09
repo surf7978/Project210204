@@ -13,6 +13,11 @@
 <!-- Bootstrap core JavaScript-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+setInterval(function(){
+	  $(".blinkEle").toggle();
+	}, 250);
+</script>
 <body>
 	<div class="card-body p-0">
 		<div align="center">
@@ -26,7 +31,7 @@
 					</c:when>
 					<c:when test="${not empty list1 }">
 						<c:forEach items="${list1 }" var="vo">
-							<div class="w3-third w3-margin-bottom" style="width: 500px">
+							<div class="w3-third w3-margin-bottom" style="width: 300px; height: 500px;" >
 								<ul class="w3-ul w3-border w3-center w3-hover-shadow"
 									onclick="location.href='boardView.do?boardDate=${vo.boardDate }'">
 									<li class="w3-purple w3-xlarge w3-padding-32"><img src="image/${vo.productImage }" style="width: 350px, height=450px"></li>

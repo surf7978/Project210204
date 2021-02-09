@@ -8,7 +8,7 @@
 		<div class="card-body p-0">
 		
 			<!-- Nested Row within Card Body -->
-  			<form class="user" id="frm" name="frm" action="insertBoard.do" method="post">
+  			<form id="frm" name="frm" action="insertBoard.do" method="post">
 				<div class="row">
 					<div class="col-lg-5 d-none d-lg-block">
 						<div class="form-group row">
