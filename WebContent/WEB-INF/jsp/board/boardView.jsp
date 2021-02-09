@@ -76,7 +76,7 @@
 								<span>	
 									<span class="blinkEle">
 										<input type="text" class="form-control form-control-user"
-										name="tradeProcess" readonly="readonly" value="${vo.tradeProcess }">
+										name="tradeProcess" readonly="readonly" value="${vo.tradeProcess }"  style="background:#FF5E5E;">
 									</span>
 								</span>
 								</div>
