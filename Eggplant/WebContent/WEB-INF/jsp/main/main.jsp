@@ -51,7 +51,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="loginForm.do">
                     <i class="fas fa-home"></i>
-                    <span>홈</span></a>
+                    <span>&nbsp;&nbsp;홈</span></a>
             </li>
 
             <!-- Divider -->
@@ -67,18 +67,18 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fas fa-edit"></i>
                     <span>게시글</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">게시글</h6>
-                        <a class="collapse-item" href="insertText.do">판매글 작성</a>
-                        <a class="collapse-item" href="textView.do">판매글 조회</a>
+                        <a class="collapse-item" href="insertText.do"><i class="fas fa-pen-alt"></i>&nbsp;&nbsp;판매글 작성</a>
+                        <a class="collapse-item" href="textList.do"><i class="fas fa-list-ul"></i>&nbsp;&nbsp;판매글 조회</a>
                     </div>
                 </div>
             </li>
             <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
@@ -96,7 +96,7 @@
                     </div>
                 </div>
             </li>
-
+			 -->
             <!-- Divider -->
 
         <hr class="sidebar-divider">
@@ -110,14 +110,14 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                 aria-expanded="true" aria-controls="collapsePages">
-                <i class="fas fa-fw fa-folder"></i>
+                <i class="far fa-flag"></i>
                 <span>고객센터</span>
             </a>
             <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="frequentlyQuestion.do">자주 묻는 질문</a>
-                    <a class="collapse-item" href="QnAList.do">Q & A</a>
-                    <a class="collapse-item" href="reportList.do">신고 센터</a>
+                    <a class="collapse-item" href="frequentlyQuestion.do">&nbsp;&nbsp;&nbsp;<i class="fas fa-list-ul"></i>&nbsp;&nbsp;자주 묻는 질문</a>
+                    <a class="collapse-item" href="QnAList.do">&nbsp;&nbsp;&nbsp;<i class="fas fa-question"></i>&nbsp;&nbsp;Q & A</a>
+                    <a class="collapse-item" href="reportList.do">&nbsp;&nbsp;&nbsp;<i class="fas fa-bug"></i>&nbsp;&nbsp;신고 센터</a>
                 </div>
             </div>
         </li>
@@ -152,7 +152,7 @@
             <!-- Sidebar Message -->
             <div class="sidebar-card">
            		<br/><br/>
-                <h1 style="font-size: 25px;">광고 문의</h1>
+                <h1 style="font-size: 25px;"><i class="fas fa-ad"></i>&nbsp;&nbsp;광고 문의</h1>
                 <br/><br/>
                 <h2>Eggplant@naver.com</h2>
                 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
@@ -349,8 +349,8 @@
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="cartList.do">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    장바구니
+                                    <i class="fas fa-shopping-cart fa-sm fa-fw text-gray-400"></i>
+                                    &nbsp;&nbsp;장바구니
                                 </a>
                                 <a class="dropdown-item" href="myPage.do">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -361,18 +361,18 @@
                                     활동 내역
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="logout.do">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     로그아웃
                                 </a>
                             </div>
                         </li>
                         <div class="topbar-divider d-none d-sm-block"></div>
-                        <div style="padding-top: 20px;">
+                        <div style="padding-top: 30px;">
                             <a class="collapse-item" href="loginForm.do" >로그인</a>
                         </div>
                             <div class="topbar-divider d-none d-sm-block"></div>
-                        <div style="padding-top: 20px;">
+                        <div style="padding-top: 30px;">
                             <a class="collapse-item" href="signUpForm.do">회원가입</a>
                         </div>
                     </ul>

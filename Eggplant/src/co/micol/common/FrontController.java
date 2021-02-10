@@ -20,6 +20,7 @@ import co.micol.my.NoteList;
 import co.micol.my.NoteNCommandList;
 import co.micol.my.NoticeList;
 import co.micol.text.InsertText;
+import co.micol.text.TextList;
 import co.micol.text.TextView;
 import co.micol.user.join.IdCheck;
 import co.micol.user.join.SignUp;
@@ -43,11 +44,13 @@ public class FrontController extends HttpServlet {
 		map.put("/loading.do", new Loading());
 		map.put("/loginForm.do", new LoginForm());
 		map.put("/login.do", new Login());
+		map.put("/logout.do", new Logout());
 		map.put("/signUpForm.do", new SignUpForm());
 		map.put("/signUp.do", new SignUp());
 		map.put("/idCheck.do", new IdCheck());
 		
 		map.put("/insertText.do", new InsertText());
+		map.put("/textList.do", new TextList());
 		map.put("/textView.do", new TextView());
 			
 		map.put("/userList.do", new UserList());

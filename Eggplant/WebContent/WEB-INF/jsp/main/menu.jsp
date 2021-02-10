@@ -15,7 +15,7 @@
 <body>
 	<header>
 		<div class="cd-dropdown-wrapper">
-			<a class="cd-dropdown-trigger" href="#0">MENU</a>
+			<a class="cd-dropdown-trigger" href="#0">목록</a>
 			<nav class="cd-dropdown">
 				<h2>Title</h2>
 				<a href="#0" class="cd-close">Close</a>
