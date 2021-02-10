@@ -17,8 +17,8 @@ public class Login implements Command {
 		memberVO vo = new memberVO();
 
 		// JSP 로그인 페이지에서 설정한 name값 채크하기
-		vo.setmId(request.getParameter("exampleInputEmail"));
-		vo.setmPassword(request.getParameter("exampleInputPassword"));
+		vo.setmId(request.getParameter("mId"));
+		vo.setmPassword(request.getParameter("mPassword"));
 		
 		System.out.println(vo.toString());
 		

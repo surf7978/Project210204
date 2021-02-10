@@ -19,6 +19,7 @@ import co.micol.my.MyPage;
 import co.micol.my.NoteList;
 import co.micol.my.NoteNCommandList;
 import co.micol.my.NoticeList;
+import co.micol.servlet.MainForm;
 import co.micol.text.InsertText;
 import co.micol.text.TextList;
 import co.micol.text.TextView;
@@ -65,6 +66,8 @@ public class FrontController extends HttpServlet {
 		map.put("/frequentlyQuestion.do", new FrequentlyQuestion());
 		map.put("/QnAList.do", new QnAList());
 		map.put("/reportList.do", new ReportList());
+		
+		map.put("/main.do", new MainForm());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

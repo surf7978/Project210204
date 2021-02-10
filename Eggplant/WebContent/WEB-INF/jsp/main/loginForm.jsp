@@ -23,12 +23,12 @@
                                     
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
-                                                name="exampleInputEmail" aria-describedby="emailHelp"
+                                                id = "mId" name="mId" aria-describedby="emailHelp"
                                                 placeholder="아이디 입력">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                name="exampleInputPassword" placeholder="패스워드 입력">
+                                               id = "mPassword" name="mPassword" placeholder="패스워드 입력">
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
