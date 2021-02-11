@@ -18,9 +18,6 @@ setInterval(function(){
 	  $(".blinkEle").toggle();
 	}, 250);
 </script>
-<style>
-	.w3-ul li{padding:0;}
-</style>
 <body>
 	<div class="card-body p-0">
 		<div align="center">
@@ -45,10 +42,12 @@ setInterval(function(){
 									<li class="w3-padding-16">가격: ${vo.price }</li>
 									<li class="w3-padding-16">조회수: ${vo.boardView }</li>
 									<c:if test="${vo.tradeProcess eq 'NotComplete' }">
-										<li style="text-align: center; color: red;">${vo.tradeProcess }</li>
+										<li style="text-align: center; color: red; padding:16px;" id="blinkEle">
+										${vo.tradeProcess }</li>
 									</c:if>
 									<c:if test="${vo.tradeProcess eq 'Complete' }">
-										<li style="text-align: center; color: red;">${vo.tradeProcess }</li>
+										<li style="text-align: center; color: red; padding:16px;" id="blinkEle">
+										${vo.tradeProcess }</li>
 									</c:if>
 								</ul>
 							</div>
