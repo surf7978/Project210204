@@ -49,7 +49,7 @@
 					
 					</table>
 				</div><br/>
-				<div>
+				<div align="center">
 					<button type="button" onclick="location.href='sendNoteForm.do?nTitle=${vo.nTitle}'">답장하기</button>
 					<button type="button" onclick="location.href='noteList.do'">쪽지함으로가기</button>
 				</div>

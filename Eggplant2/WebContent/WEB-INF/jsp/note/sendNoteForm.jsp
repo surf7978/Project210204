@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -41,19 +42,19 @@ h2{
 	<form id="frm" name="frm" onsubmit="return emptyCheck()" action="sendNote.do?tId=${vo.memberId}" method="post">
 																			<!--보내는 사람은 noteView.do의 fId임-->
 		<br/><br/>
-		<h7>제목</h7>
+		<h7>제목</h7> <br>
 		<br/>
-		<input type="text"  id="nTitle"	 name="nTitle" 
+		<input type="text"  id="nTitle"	 name="nTitle" class="form-control form-control-user"
 		placeholder="제목을 입력하세요!" style="width: 300px; height: 20px; font-size: 15px;">
 		<br/>
-		<h7>받는사람</h7>	<!--   -->
+		<h7>받는사람</h7> <br>	<!--   -->
 		<br/>
-		<input type="text" value="${vo.tId }" id="memberId" 	name="memberId"
+		<input type="text" value="${vo.tId }" class="form-control form-control-user" id="memberId" 	name="memberId"
 		placeholder="받는사람을 입력하세요!" style="width: 300px; height: 20px; font-size: 15px;">
 		<br/>
-		<h7>내용</h7>
+		<h7>내용</h7> <br>
 		<br/>
-		<input type="text" 	id="nContent" name="nContent"
+		<input type="text" 	id="nContent" name="nContent" class="form-control form-control-user"
 		placeholder="메세지를 입력하세요!" style="width: 300px; height: 200px; font-size: 15px; word-break:break-all;">
 			
 	
@@ -61,8 +62,8 @@ h2{
 		<br/><br/><br/>
 		
 		<div align="center">
-			<button type="submit">보내기</button> &nbsp;&nbsp;&nbsp;
-			<button type="button" onclick="location.href='noteList.do'">받은 쪽지 내역</button>
+			<button type="submit" >보내기</button> &nbsp;&nbsp;&nbsp;
+			<button type="button" onclick="location.href='noteList.do'" >받은 쪽지 내역</button>
 		</div>
 	</form>
 

@@ -298,7 +298,7 @@
 									</form>
 								</div>
 								<div class="col-sm-3 mb-3 mb-sm-0">
-	<form action="note.do" method="post">
+	<form action="sendNoteForm.do" method="post">
 										<button type="submit"
 											class="btn btn-facebook btn-user btn-block"
 											>문의하기</button>

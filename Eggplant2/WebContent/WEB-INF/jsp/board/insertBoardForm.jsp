@@ -66,6 +66,7 @@
 										<input type="text" class="form-control form-control-user"
 											name="memberGuAddress" placeholder="구">
 									</div>
+									
 								</div>
 								<div class="form-group row">
 									<div class="col-sm-12">
