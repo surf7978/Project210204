@@ -315,7 +315,6 @@
 	                                    <div class="small text-gray-500">${alertVO2 }</div>
     	                                Spending Alert: We've noticed unusually high spending for your account.
                                     </div>
-                                </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="noticeList.do">모든 알림 내역</a>
                             </div>
                         </li>
@@ -327,7 +326,7 @@
                             <a class="nav-link dropdown-toggle" href="noteList.do" >
                                 <i class="fas fa-envelope fa-fw"></i>
                                 <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter"  style="font-size:15px;">${alertNote }</span>
+                                <span class="badge badge-danger badge-counter"  style="font-size:15px;">1</span>
                             </a>
                         </c:if>
 						<!-- 
