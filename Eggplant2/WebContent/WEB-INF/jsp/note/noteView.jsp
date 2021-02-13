@@ -4,6 +4,39 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <jsp:include page="../main/main.jsp" />
+<style>
+.button1{
+		background-color: #4dff88;
+		 border: none;
+		  color: black;
+		  padding: 16px 32px;
+		  text-align: center;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  opacity: 0.6;
+		  transition: 0.3s;
+		  display: inline-block;
+		  text-decoration: none;
+		  cursor: pointer;
+		  border-radius: 12px;
+	}
+.button2{
+		background-color: #a64dff;
+		border: none;
+		  color: black;
+		  padding: 16px 32px;
+		  text-align: center;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  opacity: 0.6;
+		  transition: 0.3s;
+		  display: inline-block;
+		  text-decoration: none;
+		  cursor: pointer;
+		  border-radius: 12px;
+	}	
+</style>
+
 <%-- ${list } --%>
 <div id="wrapper">
 
@@ -50,8 +83,8 @@
 					</table>
 				</div><br/>
 				<div align="center">
-					<button type="button" onclick="location.href='sendNoteForm.do?nTitle=${vo.nTitle}'">답장하기</button>
-					<button type="button" onclick="location.href='noteList.do'">쪽지함으로가기</button>
+					<button type="button" class="button1" onclick="location.href='sendNoteForm.do?nTitle=${vo.nTitle}'">답장하기</button>
+					<button type="button" class="button2" onclick="location.href='noteList.do'">쪽지함으로가기</button>
 				</div>
 			</div>
 		</div>

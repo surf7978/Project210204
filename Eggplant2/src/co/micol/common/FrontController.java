@@ -40,7 +40,7 @@ import co.micol.note.NoteList;
 import co.micol.my.Profile;
 import co.micol.note.SendNote;
 import co.micol.note.SendNoteForm;
-
+import co.micol.note.SendNoteForm1;
 import co.micol.servlet.MainForm;
 import co.micol.servlet.NoticeDelete;
 import co.micol.servlet.NoticeInsert;
@@ -109,6 +109,7 @@ public class FrontController extends HttpServlet {
 		map.put("/noteList.do", new NoteList());	//받은 쪽지 목록
 		map.put("/noteView.do", new NoteView());	//받은 쪽지 한건 보기
 		map.put("/sendNoteForm.do", new SendNoteForm());	//지정된 사람에게 쪽지 보내기
+		map.put("/sendNoteForm1.do", new SendNoteForm1());	//판매자에게 쪽지보내기						
 		map.put("/sendNote.do", new SendNote());		//쪽지보내기
 		
 		

@@ -69,6 +69,23 @@
 											</div>
 										</div>
 									</div>
+									<div>
+										<div class="form-group row">
+											<div class="col-sm-6 mb-3 mb-sm-0">
+												<input readonly
+													style="text-align: right; background-color: white;"
+													type="hidden" class="form-control form-control-user"
+													id="exampleFirstName" value="#">
+											</div>
+											<div class="col-sm-3" style="text-align: right; color: black;">
+												<h5>판매자&nbsp;&nbsp;:&nbsp;&nbsp;</h5>
+											</div>
+											<div class="col-sm-3"
+												style="text-align: center; color: black;">
+												<h5>${vo.memberId }&nbsp;</h5>
+											</div>
+										</div>
+									</div>
 									<div class="form-group row">
 										<div class="col-sm-3">
 											<input readonly
@@ -81,6 +98,7 @@
 												type="text" class="form-control form-control-user"
 												id="exampleFirstName" value="판매상태  :">
 										</div>
+										
 										<c:if test="${vo.tradeProcess eq 'NotComplete' }">
 											<div class="col-sm-1" style="text-align: center;">
 												<input name="tradeProcess"  id="blinkEle" style="text-align: left; border:0; color: red; padding-top:7px;"
@@ -298,7 +316,7 @@
 									</form>
 								</div>
 								<div class="col-sm-3 mb-3 mb-sm-0">
-	<form action="sendNoteForm.do" method="post">
+	<form action="sendNoteForm1.do" method="post">
 										<button type="submit"
 											class="btn btn-facebook btn-user btn-block"
 											>문의하기</button>

@@ -26,7 +26,7 @@
 					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 						
 							<tr>
-								<th>번호 </th>
+								
 								<th>날짜</th>
 								<th>제목</th>
 								<th>보낸 사람</th>
@@ -40,7 +40,7 @@
 							<c:when test="${not empty list }">
 								<c:forEach var="vo" items="${list }">
 									<tr id="${vo.nTitle }" onclick="location.href='noteView.do?nTitle=${vo.nTitle}'">
-										<td align="center">${vo.nNum } </td>
+										
 										<td align="center">${vo.nDate } </td>
 										<td align="center">${vo.nTitle }</td>
 										<td align="center">${vo.tId} </td>
