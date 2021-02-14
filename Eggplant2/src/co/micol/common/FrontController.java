@@ -36,8 +36,11 @@ import co.micol.member.InsertMemberForm;
 import co.micol.member.MemberList;
 import co.micol.member.UpdateProfile;
 import co.micol.my.CartList;
-import co.micol.my.Note;
+import co.micol.note.NoteList;
 import co.micol.my.Profile;
+import co.micol.note.SendNote;
+import co.micol.note.SendNoteForm;
+import co.micol.note.SendNoteForm1;
 import co.micol.servlet.MainForm;
 import co.micol.servlet.NoticeDelete;
 import co.micol.servlet.NoticeInsert;
@@ -46,8 +49,9 @@ import co.micol.servlet.NoticeUpdate;
 import co.micol.servlet.NoticeUpdateForm;
 import co.micol.servlet.NoticeView;
 import co.micol.servlet.notice;
-import co.micol.my.NoteList;
+
 import co.micol.my.NoteNCommandList;
+import co.micol.note.NoteView;
 import co.micol.my.NoticeList;
 import co.micol.user.join.IdCheck;
 
@@ -101,7 +105,20 @@ public class FrontController extends HttpServlet {
 		
 		map.put("/insertCart.do", new InsertCart());
 		
-		map.put("/note.do", new Note());
+		//쪽지
+		map.put("/noteList.do", new NoteList());	//받은 쪽지 목록
+		map.put("/noteView.do", new NoteView());	//받은 쪽지 한건 보기
+		map.put("/sendNoteForm.do", new SendNoteForm());	//지정된 사람에게 쪽지 보내기
+		map.put("/sendNoteForm1.do", new SendNoteForm1());	//판매자에게 쪽지보내기						
+		map.put("/sendNote.do", new SendNote());		//쪽지보내기
+		
+		
+		
+		
+		
+		
+		
+	
 		
 		map.put("/main.do", new MainForm());
 		map.put("/notice.do", new notice());
@@ -135,7 +152,7 @@ public class FrontController extends HttpServlet {
 		map.put("/BoardList.do", new BoardList());
 		map.put("/BoardView.do", new BoardView());
 			
-		map.put("/noteList.do", new NoteList());
+		
 		
 		map.put("/frequentlyQuestion.do", new FrequentlyQuestion());
 		map.put("/QnAList.do", new QnAList());
