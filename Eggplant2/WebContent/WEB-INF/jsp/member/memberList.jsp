@@ -4,7 +4,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <jsp:include page="../main/main.jsp" />
-
+<style>
+	button{background:red;padding:8px 20px;color:#fff;font-size:13px;border:none;border-radius:0.5em;}
+	button:hover{background:#E70202;transition:0.3s;}
+	th{text-align:center;}
+</style>
 <div id="wrapper">
 
 	<!-- Begin Page Content -->
@@ -55,7 +59,7 @@
 									<!-- <button style="background-color: yellow; padding:3px; font-size:15px;" onclick="location.href='updateMember.do?memberId=${vo.memberId }&memberPassword=${vo.memberPassword }&memberName=${vo.memberName }&memberSiAddress=${vo.memberSiAddress }&memberGuAddress=${vo.memberGuAddress }&memberPhoneNumber=${vo.memberPhoneNumber }'">
 									수정</button>
 									&nbsp;&nbsp;&nbsp;&nbsp; -->
-									<button style="background-color: red; padding:3px; color:white; font-size:15px;" onclick="location.href='deleteMember.do?memberId=${vo.memberId }'">
+									<button onclick="location.href='deleteMember.do?memberId=${vo.memberId }'">
 									삭제</button>
 								</td>
 							</tr>
@@ -72,6 +76,7 @@
 
 	</div>
 	<!-- /.container-fluid -->
+	</div>
 
 </div>
 
