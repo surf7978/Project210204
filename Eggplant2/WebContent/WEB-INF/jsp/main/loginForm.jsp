@@ -45,9 +45,11 @@
                                         <a href="insertMemberForm.do" class="btn btn-google btn-user btn-block">
                                             <!-- <i class="fab fa-google fa-fw"></i> --> 회원가입
                                         </a>
+                                        <!-- 
                                         <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                            <!-- <i class="fab fa-facebook-f fa-fw"></i> --> 비밀번호 찾기
+                                            비밀번호 찾기
                                         </a>
+                                         -->
                                     </form>
                                     <hr>
                                 </div>
