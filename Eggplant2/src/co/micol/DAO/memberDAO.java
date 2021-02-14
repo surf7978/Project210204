@@ -104,7 +104,7 @@ public class memberDAO extends DAO {
 		
 		String sql16 = "insert into buy99(BuyMemberId, BoardDate, price, ProductName"//
 				+ ", MemberId, MemberSiAddress, MemberGuAddress, MemberPhoneNumber)"//
-				+ " VALUES ('kim', to_char(sysdate,'yyyy/mm/dd hh24:mi:ss'), 100, '갤럭시s9'"
+				+ " VALUES ('kim', to_char(sysdate,'yyyy/mm/dd hh24:mi:ss'), 260000, '갤럭시s9'"
 				+ ", 'park', '대구시', '서구', '010-2222-2222')";
 		
 		String sql17 = "create table cart99"//
