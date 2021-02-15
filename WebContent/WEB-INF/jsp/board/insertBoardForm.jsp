@@ -11,7 +11,7 @@
 	<div class="card o-hidden border-0 shadow-lg my-5">
 		<div class="card-body p-0">
 			<!-- Nested Row within Card Body -->
-			<form action="insertBoard.do" method="post">
+			<form onsubmit="return imageUpload()" action="FileUpload" method="post" enctype="multipart/form-data">
 			<div class="row">
 				
 					<div class="col-lg-5 d-none d-lg-block">
@@ -135,12 +135,12 @@
 								</div>
 								<br /> <br />
 								<div>
-									<form action="FileUpload" method="post" enctype="multipart/form-data">
 										<!-- FileUpLoad 서블릿 실행 -->
 										<input type="file" class="form-control" style="padding-bottom:35px;"
-											id="productImage" name="productImage"><br> 
+											id="productImage1"><br> 
 										<p>
-									</form>
+										<input type="hidden" class="form-control" style="padding-bottom:35px;"
+											id="productImage" name="productImage">
 								</div>
 								<hr>
 								<div class="form-group row" align="center">
@@ -215,5 +215,15 @@
 <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
+<script type="text/javascript">
+	function imageUpload(){
+		productImage.value = productImage1.value.substr(productImage1.value.lastIndexOf("\\")+1); 
+		//이미지명 잘라주기 위한 것 + substr(시작, 끝)끝에 아무것도 안적으면 끝까지 가져옴
+		console.log(productImage.value);
+		productImage.value.submit();
+		return true;
+	}
+
+</script>
 
 </html>
