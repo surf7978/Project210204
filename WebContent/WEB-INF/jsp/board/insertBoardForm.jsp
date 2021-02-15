@@ -98,12 +98,12 @@
 									<div class="col-sm-6">
 									<input type="text" class="form-control form-control-user"
 										name="productColor" 
-										value="색상 입력">
+										placeholder="색상 입력">
 									</div>
 									<div class="col-sm-6">
 									<input type="text" class="form-control form-control-user"
 										name="productVolume" list="volume"
-										value="용량 입력">
+										placeholder="용량 입력">
 									<datalist id="volume">
 										<option value="16">GB</option>
 										<option value="32">GB</option>
