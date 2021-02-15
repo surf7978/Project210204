@@ -34,7 +34,7 @@ setInterval(function(){
 							<div class="w3-third w3-margin-bottom" style="width: 500px">
 								<ul class="w3-ul w3-border w3-center w3-hover-shadow"
 									onclick="location.href='boardView.do?boardDate=${vo.boardDate }'">
-									<li class="w3-purple w3-xlarge w3-padding-32"><img src="image/${vo.productImage }"></li>
+									<li class="w3-xlarge w3-padding-32" style="background:#fff;height:500px;overflow:hidden;line-height: 500px;margin:0;padding:0;padding-top:0!important;"><img src="image/${vo.productImage }" style="width:100%;"></li>
 									<li class="w3-padding-16">${vo.boardTitle }</li>
 									<li class="w3-padding-16">${vo.category1 } > ${vo.category2 } > ${vo.productName }</li>
 									<li class="w3-padding-16">용량: ${vo.productVolume } GB / 
@@ -46,7 +46,7 @@ setInterval(function(){
 										${vo.tradeProcess }</li>
 									</c:if>
 									<c:if test="${vo.tradeProcess eq 'Complete' }">
-										<li style="text-align: center; color: red; padding:16px;" id="blinkEle">
+										<li style="text-align: center; color: green; padding:16px;" id="blinkEle">
 										${vo.tradeProcess }</li>
 									</c:if>
 								</ul>

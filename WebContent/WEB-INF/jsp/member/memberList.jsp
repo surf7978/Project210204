@@ -5,6 +5,12 @@
 
 <jsp:include page="../main/main.jsp" />
 
+<style>
+   button{background:red;padding:13px 20px;color:#fff;font-size:13px;border:none;border-radius:0.5em;}
+   button:hover{background:#E70202;transition:0.3s;}
+   th{text-align:center;}
+</style>
+
 <div id="wrapper">
 
 	<!-- Begin Page Content -->

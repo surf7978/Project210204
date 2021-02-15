@@ -131,9 +131,9 @@ public class memberDAO extends DAO {
 				+ ", nDate varchar2(20) default to_char(sysdate,'yyyy/mm/dd hh24:mi:ss') not null"//
 				+ " )";
 		String sql19 = "insert into notice99(nNumber, nTITLE, nCONTENT, nWriter, nDate)"
-				+ " values('1', '첫번째 공지입니다.', '첫번째 공지 내용', 'admin', 2021/02/14 09:23:52)";
+				+ " values('1', '첫번째 공지입니다.', '첫번째 공지 내용', 'admin', '2021/02/14 09:23:52')";
 		String sql20 = "insert into notice99(nNumber, nTITLE, nCONTENT, nWriter, nDate)"
-				+ " values('2', '두번째 공지입니다.', '두번째 공지 내용', 'admin', 2021/02/14 11:23:52)";
+				+ " values('2', '두번째 공지입니다.', '두번째 공지 내용', 'admin', '2021/02/14 11:23:52')";
 		
 		
 		String sql21 = "insert into member99"//
@@ -144,7 +144,7 @@ public class memberDAO extends DAO {
 				+ " values('hong','1234', '홍', 'USER', '인천광역시', '동구', '010-5555-5555')";
 		
 		String sql23 = "insert into notice99(nNumber, nTITLE, nCONTENT, nWriter, nDate)"
-				+ " values('3', '세번째 공지입니다.', '세번째 공지 내용', 'admin', 2021/02/15 09:23:52)";
+				+ " values('3', '세번째 공지입니다.', '세번째 공지 내용', 'admin', '2021/02/15 09:23:52')";
 		
 		String sql24 = "insert into board99"//
 				+ "(BoardTitle, BoardContent, ProductName, MemberId, MemberSiAddress, MemberGuAddress, MemberPhoneNumber"
@@ -263,6 +263,7 @@ public class memberDAO extends DAO {
 		String sql6 ="drop table sell99";
 		String sql7 ="drop table cart99";
 		String sql8 ="drop table notice99";
+		String sql9 = "drop sequence notice_seq";
 		try {
 			psmt = conn.prepareStatement(sql1);
 			psmt.executeQuery();
@@ -279,6 +280,8 @@ public class memberDAO extends DAO {
 			psmt = conn.prepareStatement(sql7);
 			psmt.executeQuery();
 			psmt = conn.prepareStatement(sql8);
+			psmt.executeQuery();
+			psmt = conn.prepareStatement(sql9);
 			psmt.executeQuery();
 		} catch (SQLException e) {
 			e.printStackTrace();

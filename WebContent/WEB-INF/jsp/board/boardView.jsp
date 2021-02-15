@@ -82,17 +82,23 @@
 												id="exampleFirstName" value="판매상태  :">
 										</div>
 										<c:if test="${vo.tradeProcess eq 'NotComplete' }">
-											<div class="col-sm-1" style="text-align: center;">
-												<input name="tradeProcess"  id="blinkEle" style="text-align: left; border:0; color: red; padding-top:7px;"
-													value="${vo.tradeProcess }" readonly>
-
+											<div class="col-sm-3">
+												<span>	
+													<span class="blinkEle">
+														<input type="text" class="form-control form-control-user"
+														name="tradeProcess" readonly="readonly" value="${vo.tradeProcess }"  style="background:white; color:red; border:0;">
+													</span>
+												</span>
 											</div>
 										</c:if>
 										<c:if test="${vo.tradeProcess eq 'Complete' }">
-											<div class="col-sm-3"
-												style="text-align: center;">
-												<input name="tradeProcess"  id="blinkEle" style="text-align: left; border:0; color: green; padding-top:7px;"
-													value="${vo.tradeProcess }" readonly>
+											<div class="col-sm-3">
+												<span>	
+													<span>
+														<input type="text" class="form-control form-control-user"
+														name="tradeProcess" readonly="readonly" value="${vo.tradeProcess }"  style="background:white; color:green; border:0;">
+													</span>
+												</span>
 											</div>
 										</c:if>
 									</div>

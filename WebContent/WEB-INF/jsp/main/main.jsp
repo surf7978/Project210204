@@ -129,7 +129,9 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="frequentlyQuestion.do">&nbsp;&nbsp;&nbsp;<i class="fas fa-list-ul"></i>&nbsp;&nbsp;자주 묻는 질문</a>
                     <a class="collapse-item" href="notice.do">&nbsp;&nbsp;&nbsp;<i class="fas fa-question"></i>&nbsp;&nbsp;공지사항</a>
-                    <a class="collapse-item" href="reportList.do">&nbsp;&nbsp;&nbsp;<i class="fas fa-bug"></i>&nbsp;&nbsp;신고 센터</a>
+                    <!-- 
+                     <a class="collapse-item" href="reportList.do">&nbsp;&nbsp;&nbsp;<i class="fas fa-bug"></i>&nbsp;&nbsp;신고 센터</a>
+                     -->
                 </div>
             </div>
         </li>
