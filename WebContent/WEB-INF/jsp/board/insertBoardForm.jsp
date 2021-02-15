@@ -37,7 +37,11 @@
 
 								<hr>
 								<div class="form-group row">
-									<div class="col-sm-6">
+									<div class="col-sm-4">
+										<input type="text" class="form-control form-control-user" style="background-color:white; text-align:center; color: #9400d3;"
+											readonly placeholder="주 소">
+									</div>
+									<div class="col-sm-4">
 									<label>
 										<input type="text" class="form-control form-control-user"
 											list="siAddress" name="memberSiAddress" placeholder="시">
@@ -62,20 +66,28 @@
 											</datalist>
 											</label>
 									</div>
-									<div class="col-sm-6">
+									<div class="col-sm-4">
 										<input type="text" class="form-control form-control-user"
 											name="memberGuAddress" placeholder="구">
 									</div>
 								</div>
 								<div class="form-group row">
-									<div class="col-sm-12">
+									<div class="col-sm-4">
+										<input type="text" class="form-control form-control-user" style="background-color:white; text-align:center; color: #9400d3;"
+											readonly placeholder="연 락 처">
+									</div>
+									<div class="col-sm-8">
 										<input type="text" class="form-control form-control-user"
 											name="memberPhoneNumber" placeholder="연락처">
 									</div>
 								</div>
 								<hr>
 								<div class="form-group row">
-									<div class="col-sm-6">
+									<div class="col-sm-4">
+										<input type="text" class="form-control form-control-user" style="background-color:white; text-align:center; color: #9400d3;"
+											readonly placeholder="분 류">
+									</div>
+									<div class="col-sm-3">
 										<input type="text" class="form-control form-control-user"
 											name="category1" list="category1" placeholder="분류1">
 											<datalist id="category1">
@@ -83,22 +95,39 @@
 											<option value="전자기기"></option>
 											</datalist>
 									</div>
-									<div class="col-sm-6">
+									<div class="col-sm-3">
 										<input type="text" class="form-control form-control-user"
 											name="category2" placeholder="분류2">
 									</div>
 								</div>
 								<div class="form-group row">
-									<div class="col-sm-12">
+									<div class="col-sm-4">
+										<input type="text" class="form-control form-control-user" style="background-color:white; text-align:center; color: #9400d3;"
+											readonly placeholder="품 명">
+									</div>
+									<div class="col-sm-6">
 										<input type="text" class="form-control form-control-user"
-											name="productName" placeholder="제품명">
+											name="productName" placeholder="품명">
 									</div>
 								</div>
 								<div class="form-group row">
+									<div class="col-sm-4">
+									<input type="text" class="form-control form-control-user"
+										readonly style="background-color:white; text-align:center; color: #9400d3;"
+										placeholder="색 상">
+									</div>
 									<div class="col-sm-6">
 									<input type="text" class="form-control form-control-user"
 										name="productColor" 
 										placeholder="색상 입력">
+									</div>
+									
+								</div>
+								<div class="form-group row">
+									<div class="col-sm-4">
+									<input type="text" class="form-control form-control-user"
+										readonly style="background-color:white; text-align:center; color: #9400d3;"
+										placeholder="용량">
 									</div>
 									<div class="col-sm-6">
 									<input type="text" class="form-control form-control-user"
@@ -114,10 +143,13 @@
 									</datalist>
 									</div>
 								</div>
-								
 								<hr>
 
 								<div class="form-group row">
+									<div class="col-sm-4">
+										<input type="text" class="form-control form-control-user"
+											readonly placeholder="판매가격" style="background-color:white; text-align:center; color: #9400d3;">
+									</div>
 									<div class="col-sm-6">
 										<input type="text" class="form-control form-control-user"
 											name="price" placeholder="판매가격">
