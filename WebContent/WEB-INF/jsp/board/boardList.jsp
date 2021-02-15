@@ -21,7 +21,7 @@ setInterval(function(){
 <body>
 	<div class="card-body p-0">
 		<div align="center">
-			<h1>내폰 사기</h1>
+			<h1>판매글 조회</h1>
 			<div>
 				<c:choose>
 					<c:when test="${empty list1 }">
@@ -31,13 +31,13 @@ setInterval(function(){
 					</c:when>
 					<c:when test="${not empty list1 }">
 						<c:forEach items="${list1 }" var="vo">
-							<div class="w3-third w3-margin-bottom" style="width: 300px; height: 500px;" >
+							<div class="w3-third w3-margin-bottom" style="width: 500px">
 								<ul class="w3-ul w3-border w3-center w3-hover-shadow"
 									onclick="location.href='boardView.do?boardDate=${vo.boardDate }'">
-									<li class="w3-purple w3-xlarge" style="width:300px; height:250px;overflow:hidden;"><img src="image/${vo.productImage }" style="width:100%;"></li>
+									<li class="w3-purple w3-xlarge w3-padding-32"><img src="image/${vo.productImage }"></li>
 									<li class="w3-padding-16">${vo.boardTitle }</li>
-									<li class="w3-padding-16">${vo.productName }</li>
-									<li class="w3-padding-16">용량: ${vo.productVolume } / 
+									<li class="w3-padding-16">${vo.category1 } > ${vo.category2 } > ${vo.productName }</li>
+									<li class="w3-padding-16">용량: ${vo.productVolume } GB / 
 															  색상: ${vo.productColor }</li>
 									<li class="w3-padding-16">가격: ${vo.price }</li>
 									<li class="w3-padding-16">조회수: ${vo.boardView }</li>

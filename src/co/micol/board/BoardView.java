@@ -19,8 +19,7 @@ public class BoardView implements Command {
 		boardVO vo = new boardVO();
 		vo.setBoardDate(request.getParameter("boardDate"));
 		
-		vo = dao.selectBoard(vo);
-		
+		dao.selectBoard(vo);
 		System.out.println(vo.toString());
 		
 		request.setAttribute("vo", vo);

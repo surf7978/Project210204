@@ -3,6 +3,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <jsp:include page="../main/main.jsp" />
+
+<style>
+	textarea{
+		resize:none;
+	}
+</style>
 <!-- ------------------------------------------------------------------- -->
 <div class="container">
 <form id="frm" name="frm" action="updateBoard.do" method="post">
@@ -14,9 +20,11 @@
                      <div class="col-lg-5 d-none d-lg-block">
 						<div class="form-group row">
 							<div class="col-sm-12 mb-3 mb-sm-0">
-								<input type="text" class="form-control form-control-user"
-									name="boardTitle" value="${vos.boardTitle }">
-							</div>
+									<input type="text" class="form-control form-control-user"
+										id="boardTitle" name="boardTitle" 
+										style="text-align:center; font-size:40px;"
+										value="${vos.boardTitle }">
+								</div>
 						</div>
 						<div class="card o-hidden border-0 shadow-lg my-5">
 								<div class="card-body p-0">
@@ -27,7 +35,7 @@
 							<div class="col-sm-12 mb-3 mb-sm-0">
 								<textarea class="form-control"
 									name="boardContent" 
-									style="margin-top: 0px; margin-bottom: 0px; height: 500px;">${vos.boardContent }</textarea>
+									style="margin-top: 0px; margin-bottom: 0px; height: 340px;">${vos.boardContent }</textarea>
 							</div>
 						</div>
 					
@@ -35,78 +43,82 @@
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-right">
-                                <div>
-                                    <div class="form-group row">
-										<div class="col-sm-6 mb-3 mb-sm-0">
+									<div>
+										<div class="form-group row">
+											<div class="col-sm-6 mb-3 mb-sm-0">
+												<input readonly
+													style="text-align: right; background-color: white;"
+													type="hidden" class="form-control form-control-user"
+													id="exampleFirstName" value="#">
+											</div>
+											<div class="col-sm-3" style="text-align: right; color: black;">
+												<h5>조회수&nbsp;&nbsp;:&nbsp;&nbsp;</h5>
+											</div>
+											<div class="col-sm-3"
+												style="text-align: center; color: black;">
+												<h5>${vos.boardView }&nbsp;</h5>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<div class="col-sm-3">
 											<input readonly
-												style="text-align: right; background-color: white;"
+												style="text-align: center; background-color: white;"
 												type="hidden" class="form-control form-control-user"
 												id="exampleFirstName" value="#">
 										</div>
-										<div class="col-sm-2">
-											<input readonly
-												style="text-align: center; background-color: white; color: #9400d3;"
-												type="text" class="form-control form-control-user"
-												id="exampleLastName" value="조회수">
+										<div class="col-sm-5">
+										<div>
+											
 										</div>
-										<div class="col-sm-3">
-											<input type="text" class="form-control form-control-user"
-												name="memberPhoneNumber" readonly="readonly" value="${vos.boardView }">
+											<input readonly
+												style="text-align: right; background-color: white; border:0; color:black;"
+												type="text" class="form-control form-control-user"
+												id="exampleFirstName" value="판매상태  :">
+										</div>
+										<c:if test="${vos.tradeProcess eq 'NotComplete' }">
+											<label>
+										<input type="text" class="form-control form-control-user"
+											list="tradeProcess" name="tradeProcess"  style="text-align:center;">
+											<datalist id="tradeProcess">
+												<option value="Complete"></option>
+												<option value="NotComplete"></option>
+											</datalist>
+											</label>
+										</c:if>
+										<c:if test="${vos.tradeProcess eq 'Complete' }">
+											<label>
+										<input type="text" class="form-control form-control-user"
+											list="tradeProcess" name="tradeProcess"  style="text-align:center;">
+											<datalist id="tradeProcess">
+												<option value="Complete"></option>
+												<option value="NotComplete"></option>
+											</datalist>
+											</label>
+										</c:if>
+									</div>
+									<div class="form-group row">
+										<div class="col-sm-6 mb-3 mb-sm-0">
+											<input readonly
+												style="text-align: center; background-color: white;"
+												type="hidden" class="form-control form-control-user"
+												id="exampleFirstName" value="#">
+										</div>
+										<div class="col-sm-6" style="text-align: right; color: black;">
+											<h6>작성날짜&nbsp;&nbsp;:&nbsp;&nbsp;${vos.boardDate }</h6>
 										</div>
 									</div>
 								</div>
-                                    <div class="form-group row">
-								<div class="col-sm-5 mb-3 mb-sm-0">
-									<input readonly
-										style="text-align: right; background-color: white;"
-										type="hidden" class="form-control form-control-user"
-										id="exampleFirstName" value="#">
-								</div>
-								<div class="col-sm-3">
-									<input readonly
-										style="text-align: center; background-color: white; color: #9400d3;"
-										type="text" class="form-control form-control-user"
-										id="exampleLastName" value="판매여부">
-								</div>
-								<div class="col-sm-3">
-										<label><input type="text" class="form-control form-control-user"
-										list="trade" name="tradeProcess" value="${vos.tradeProcess }" >
-										<datalist id="trade">
-										<option value="판매완료"></option>
-										<option value="판매중"></option>
-										</datalist>
-										</label>
-								</div>
-							</div>
-                                   <div class="form-group row">
-								<div class="col-sm-3 mb-3 mb-sm-0">
-									<input readonly
-										style="text-align: right; background-color: white;"
-										type="hidden" class="form-control form-control-user"
-										id="exampleFirstName">
-								</div>
-								<div class="col-sm-2">
-									<input readonly
-										style="text-align: center; background-color: white; color: #9400d3;"
-										type="text" class="form-control form-control-user"
-										id="exampleLastName" value="날짜">
-								</div>
-								<div class="col-sm-6">
-									<input type="text" class="form-control form-control-user"
-										name="memberPhoneNumber" readonly="readonly" value=${vos.boardDate }>
-								</div>
-							</div>
-                                </div>
                             </div>
                                 <hr>
 								<div class="form-group row">
 								<div class="col-sm-2">
                                         <input readonly style="text-align:center; background-color:white; color:#9400d3;" type="text" class="form-control form-control-user" id="exampleLastName"
-                                            value="지역">
+                                            value="지 역">
                                     </div>
 									<div class="col-sm-4">
 									<label>
-										<input type="text" class="form-control form-control-user"
+										<input type="text" class="form-control form-control-user" style="text-align:center;"
 											list="siAddress" name="memberSiAddress" value="${vos.memberSiAddress }">
 											<datalist id="siAddress">
 												<option value="서울특별시"></option>
@@ -130,7 +142,7 @@
 											</label>
 									</div>
 									<div class="col-sm-4">
-										<input type="text" class="form-control form-control-user"
+										<input type="text" class="form-control form-control-user" style="text-align:center;"
 											name="memberGuAddress" value="${vos.memberGuAddress }">
 									</div>
 								</div>
@@ -144,12 +156,40 @@
 											name="memberPhoneNumber" value="${vos.memberPhoneNumber }">
 									</div>
 								</div>
+								<div class="form-group row">
+                                	 <div class="col-sm-3">
+                                        <input readonly style="text-align:center; background-color:white; color:#9400d3;" type="text" class="form-control form-control-user" id="exampleLastName"
+                                            value="판 매 자">
+                                    </div>
+									<div class="col-sm-9">
+										<input type="text" class="form-control form-control-user"
+											name="memberId" value="${vos.memberId }">
+									</div>
+								</div>
                                 <hr>
                                 
+                                <div class="form-group row">
+								<div class="col-sm-2">
+									<input readonly
+										style="text-align: center; background-color: white; color: #9400d3;"
+										type="text" class="form-control form-control-user"
+										id="exampleLastName" value="분 류">
+								</div>
+								<div class="col-sm-4">
+									<input type="text" class="form-control form-control-user"
+										name="category1"
+										value="${vos.category1}">
+								</div>
+								<div class="col-sm-4">
+									<input type="text" class="form-control form-control-user"
+										name="category2"
+										value="${vos.category2}">
+								</div>
+								</div>
 								<div class="form-group row">
 									<div class="col-sm-2">
                                         <input readonly style="text-align:center; background-color:white; color:#9400d3;" type="text" class="form-control form-control-user" id="exampleLastName"
-                                            value="기종">
+                                            value="기 종">
                                     </div>
 									<div class="col-sm-9">
 										<input type="text" class="form-control form-control-user"
@@ -159,7 +199,7 @@
 								<div class="form-group row">
 									<div class="col-sm-2">
                                         <input readonly style="text-align:center; background-color:white; color:#9400d3;" type="text" class="form-control form-control-user" id="exampleLastName"
-                                            value="색상">
+                                            value="색 상">
                                     </div>
 									<div class="col-sm-6">
 										<input type="text" class="form-control form-control-user"
@@ -169,19 +209,21 @@
 								<div class="form-group row">
 								<div class="col-sm-2">
                                         <input readonly style="text-align:center; background-color:white; color:#9400d3;" type="text" class="form-control form-control-user" id="exampleLastName"
-                                            value="용량">
+                                            value="용 량">
                                     </div>
 									<div class="col-sm-6">
-										<input type="text" class="form-control form-control-user"
-											name="productVolume" list="volume" value="${vos.productVolume}">
-											<datalist id="volume">
-											<option value="16">GB</option>
-											<option value="32">GB</option>
-											<option value="64">GB</option>
-											<option value="128">GB</option>
-											<option value="256">GB</option>
-											<option value="512">GB</option>
+									<label>
+										<input type="text" class="form-control form-control-user" style="text-align:center;"
+											list="volume1" name="productVolume" value="${vos.productVolume }">
+											<datalist id="volume1">
+												<option value="16">GB</option>
+												<option value="32">GB</option>
+												<option value="64">GB</option>
+												<option value="128">GB</option>
+												<option value="256">GB</option>
+												<option value="512">GB</option>											
 											</datalist>
+									</label>
 									</div>
 								</div>
                                 <hr>
@@ -189,15 +231,14 @@
 								<div class="form-group row">
 								<div class="col-sm-2">
                                         <input readonly style="text-align:center; background-color:white; color:#9400d3;" type="text" class="form-control form-control-user" id="exampleLastName"
-                                            value="가격">
+                                            value="가 격">
                                     </div>
 									<div class="col-sm-9">
 										<input type="text" class="form-control form-control-user"
-											name="price" value="${vos.price }">
+											name="updatePrice" value="${vos.price }">
 									</div>
                                 </div>
                                 <hr>
-                                <br /> <br />
 								<div>
 
 								<div class="form-group row">
@@ -210,7 +251,7 @@
 									</div>
 									<div class="col-sm-3">
 											<input type="button" class="btn btn-primary btn-user btn-block" 
-													onClick="window.open('fileUpload.do','파일업로드','width=400,height=400,location=no,status=no,scrollbars=no')" value="파일업로드">
+													onClick="window.open('fileUpload.do','파일업로드','width=400,height=100,location=no,status=no,scrollbars=no')" value="파일업로드">
 									</div>
 								</div>
 								</div>
@@ -219,22 +260,19 @@
                                 <div class="col-sm-2 mb-3 mb-sm-0">
                                     <input type="hidden" >
                                 </div>
-                                <c:if test="${vos.memberId eq memberId }">
                                 <div class="col-sm-4 mb-3 mb-sm-0">
                                     <input type="submit" class="btn btn-primary btn-user btn-block" value="수정완료">
 
                                 </div>
-                                </c:if>
                                 <div class="col-sm-1 mb-3 mb-sm-0">
                                     <input type="hidden" >
                                 </div>
                                 <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <a href="boardList.do" class="btn btn-facebook btn-user btn-block">
+                                    <a href="boardView.do?boardDate=${vos.boardDate }" class="btn btn-facebook btn-user btn-block">
                                         뒤로가기
                                     </a>
                                 </div>
                                  </div>
-                                <hr>
                                 </div>
                                 
 <div>

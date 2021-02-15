@@ -16,26 +16,23 @@ public class UpdateBoard implements Command {
 		vo.setBoardDate(request.getParameter("boardDate"));
 		vo.setBoardTitle(request.getParameter("boardTitle"));
 		vo.setBoardContent(request.getParameter("boardContent"));
-		vo.setPrice(Integer.parseInt(request.getParameter("price")));
-		vo.setMemberSiAddress(request.getParameter("memberSiAddress"));
-		vo.setMemberGuAddress(request.getParameter("memberGuAddress"));
+		vo.setPrice(Integer.parseInt(request.getParameter("updatePrice")));
 		vo.setTradeProcess(request.getParameter("tradeProcess"));
 		vo.setProductImage(request.getParameter("productImage"));
-		vo.setProductVolume(Integer.parseInt(request.getParameter("productVolume")));
+		
+		vo.setMemberSiAddress(request.getParameter("memberSiAddress"));
+		vo.setMemberGuAddress(request.getParameter("memberGuAddress"));
+		vo.setCategory1(request.getParameter("category1"));
+		vo.setCategory2(request.getParameter("category2"));
+		
 		vo.setProductColor(request.getParameter("productColor"));
+		vo.setProductVolume(Integer.parseInt(request.getParameter("productVolume")));
 		
-		int n = dao.updateBoard(vo);
-
-		String viewPage = null;
+		System.out.println(vo.toString());
 		
-		if(n != 0) {
-			String msg = "정상적으로 수정되었습니다. ";
-			request.setAttribute("msg", msg);
-			viewPage = "boardList.do";
-		} else {
-			viewPage = "error1";
-		}
-		return viewPage;
+		dao.updateBoard(vo);
+		
+		return "boardView.do";
 	}
 
 }

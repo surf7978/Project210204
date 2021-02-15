@@ -32,7 +32,7 @@
             						</a>
             						<div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 						<div class="bg-white py-2 collapse-inner rounded">
-                    						<a class="collapse-item" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A1. 나가 뒤지세요.^^</a>
+                    						<a class="collapse-item" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A1. 새로가입 ㄱㄱ</a>
                 						</div>
             						</div>
         						</div>
@@ -46,7 +46,7 @@
             						</a>
             						<div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 						<div class="bg-white py-2 collapse-inner rounded">
-                    						<a class="collapse-item" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A2. 저런... 어쩌면 그걸 당한 사람도 잘못이 있지 않을까요?</a>
+                    						<a class="collapse-item" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A2. 신고 ㄱㄱ</a>
                 						</div>
             						</div>
         						</div>
@@ -56,11 +56,11 @@
         						<th>
 								<div class="nav-item">
                 					<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-				                		<span style="color:black;">Q3. 회원탈퇴 하고 저장된 개인정보를 폐기하고 싶어요.</span>
+				                		<span style="color:black;">Q3. 회원탈퇴를 하고싶어요.</span>
             						</a>
             						<div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 						<div class="bg-white py-2 collapse-inner rounded">
-                    						<a class="collapse-item" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A3. 꺼~~~억 ! ^^</a>
+                    						<a class="collapse-item" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A3. 안해줌^^</a>
                 						</div>
             						</div>
         						</div>
@@ -121,33 +121,6 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
-    <script type="text/javascript">
-	$(function(){
-		$.ajax({		
-			type:'post',
-			url:'<%=request.getContextPath()%>/memberList',
-			dataType : "json",
-			success : function(result) {
-				console.log(result);
-				console.log('ajax GET 통신 성공');
-				for (let i = 0; i < result.length; i++) {
-	                let tr = document.createElement('tr');
-	                console.log(result[i]);
-	                tr.setAttribute("id", result[i].mId);
-	                tr.setAttribute("name", result[i].mId);
-	                tr.setAttribute("onclick", "myPage.do");
-	                let tbody = document.getElementById("show").append(tr);
-	                console.log(result[i]);
-	                for(filed in result[i]){	    
-	                	let td = document.createElement('td');
-	                	td.innerHTML = result[i][filed];
-                        tr.appendChild(td);	                	
-	                }
-                }
-			}
-		})
-	})
-</script>
 
 </body>
 

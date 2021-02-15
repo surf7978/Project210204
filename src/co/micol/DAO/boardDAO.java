@@ -30,10 +30,12 @@ public class boardDAO extends DAO {
 				vo.setMemberGuAddress(rs.getString("memberGuAddress"));
 				vo.setMemberId(rs.getString("memberId"));
 				vo.setBoardDate(rs.getString("boardDate"));
-				vo.setProductImage(rs.getString("productImage"));
-				vo.setProductVolume(rs.getInt("productVolume"));
-				vo.setProductColor(rs.getString("productColor"));
 				vo.setTradeProcess(rs.getString("tradeProcess"));
+				vo.setCategory1(rs.getString("category1"));
+				vo.setCategory2(rs.getString("category2"));
+				vo.setProductImage(rs.getString("productImage"));
+				vo.setProductColor(rs.getString("productColor"));
+				vo.setProductVolume(rs.getInt("productVolume"));
 				list.add(vo);				
 			}			
 		} catch (Exception e) {
@@ -62,10 +64,12 @@ public class boardDAO extends DAO {
 				vo.setMemberSiAddress(rs.getString("memberSiAddress"));
 				vo.setMemberGuAddress(rs.getString("memberGuAddress"));
 				vo.setMemberPhoneNumber(rs.getString("memberPhoneNumber"));
-				vo.setProductImage(rs.getString("productImage"));
-				vo.setProductVolume(rs.getInt("productVolume"));
-				vo.setProductColor(rs.getString("productColor"));
 				vo.setTradeProcess(rs.getString("tradeProcess"));
+				vo.setCategory1(rs.getString("category1"));
+				vo.setCategory2(rs.getString("category2"));
+				vo.setProductImage(rs.getString("productImage"));
+				vo.setProductColor(rs.getString("productColor"));
+				vo.setProductVolume(rs.getInt("productVolume"));
 				updateView(vo);
 			}
 		} catch (Exception e) {
@@ -79,25 +83,44 @@ public class boardDAO extends DAO {
 
 	
 //등록
-	public int insertBoard(boardVO vo) {	// 뷰, 라이크는 제외
-		String sql="INSERT INTO board99"//
+	public int insertBoard(boardVO vo) {
+		String sql1="INSERT INTO board99"//
 				+ " (boardTitle, boardContent, price, productName"//
-				+ ", memberId, MemberSiAddress, MemberGuAddress, MemberPhoneNumber,ProductImage,ProductVolume,ProductColor)"//
-				+ " VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+				+ ", memberId, MemberSiAddress, MemberGuAddress, MemberPhoneNumber, ProductImage"//
+				+ ", ProductVolume, ProductColor, Category1, Category2"//
+				+ " )"//
+				+ " VALUES (?,?,?,?"
+				+ ",?,?,?,?,?"
+				+ ",?,?,?,?)";
+		
+		String sql2="INSERT INTO product99"//
+				+ " (productName, category1, category2)"//
+				+ " VALUES (?,?,?)";
 		int n =0;
 		try {
-			psmt = conn.prepareStatement(sql);
+			psmt = conn.prepareStatement(sql1);
 			psmt.setString(1, vo.getBoardTitle());
 			psmt.setString(2, vo.getBoardContent());
 			psmt.setInt(3, vo.getPrice());
 			psmt.setString(4, vo.getProductName());
+			
 			psmt.setString(5, vo.getMemberId());
 			psmt.setString(6, vo.getMemberSiAddress());
 			psmt.setString(7, vo.getMemberGuAddress());
 			psmt.setString(8, vo.getMemberPhoneNumber());
 			psmt.setString(9, vo.getProductImage());
+			
 			psmt.setInt(10, vo.getProductVolume());
 			psmt.setString(11, vo.getProductColor());
+			psmt.setString(12, vo.getCategory1());
+			psmt.setString(13, vo.getCategory2());
+			n = psmt.executeUpdate();
+			
+			
+			psmt = conn.prepareStatement(sql2);
+			psmt.setString(1, vo.getProductName());
+			psmt.setString(2, vo.getCategory1());
+			psmt.setString(3, vo.getCategory2());
 			n = psmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -121,22 +144,38 @@ public class boardDAO extends DAO {
 	}
 	
 //수정
-	public int updateBoard(boardVO vo) { //제목,내용,가격,사진,주소,할인
+	public int updateBoard(boardVO vo) { 
 		int n =0;
-		String sql="UPDATE board99 SET BoardTitle= ?, BoardContent =?, price =?, memberSiAddress=?, memberGuAddress=?,productImage=?, productVolume=?, productColor=?,tradeProcess =? WHERE BoardDate =?";
+		String sql="UPDATE board99 SET"//
+				+ " BoardTitle= ?, BoardContent =?, price =?"//
+				+ ", tradeProcess =?, ProductImage =?"//
+				+ ",memberSiAddress =?, memberGuAddress =?"//
+				+ ", category1 =?, category2 =?"//
+				+ ", productColor =?, productVolume =?"//
+				+ " WHERE BoardDate =?";
 	
+		String sql2 = "UPDATE cart99 SET"//
+				+ " tradeProcess =?"//
+				+ " WHERE BoardDate =?";
 		try {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1,vo.getBoardTitle());
 			psmt.setString(2, vo.getBoardContent());
 			psmt.setInt(3, vo.getPrice());
-			psmt.setString(4, vo.getMemberSiAddress());
-			psmt.setString(5, vo.getMemberGuAddress());
-			psmt.setString(6, vo.getProductImage());
-			psmt.setInt(7, vo.getProductVolume());
-			psmt.setString(8, vo.getProductColor());
-			psmt.setString(9, vo.getTradeProcess());
-			psmt.setString(10, vo.getBoardDate());
+			psmt.setString(4, vo.getTradeProcess());
+			psmt.setString(5, vo.getProductImage());
+			psmt.setString(6, vo.getMemberSiAddress());
+			psmt.setString(7, vo.getMemberGuAddress());
+			psmt.setString(8, vo.getCategory1());
+			psmt.setString(9, vo.getCategory2());
+			psmt.setString(10, vo.getProductColor());
+			psmt.setInt(11, vo.getProductVolume());
+			psmt.setString(12, vo.getBoardDate());
+			n = psmt.executeUpdate();
+			
+			psmt = conn.prepareStatement(sql2);
+			psmt.setString(1, vo.getTradeProcess());
+			psmt.setString(2, vo.getBoardDate());
 			n = psmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -145,6 +184,7 @@ public class boardDAO extends DAO {
 		}
 		return n;
 	}
+	
 //삭제
 	public int deleteBoard(boardVO vo) {
 		int n =0;
@@ -153,15 +193,106 @@ public class boardDAO extends DAO {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, vo.getBoardDate());
 			n = psmt.executeUpdate();
-			System.out.println(n + "건이 삭제");
 		} catch (Exception e) {
 		} finally {
 			close();
 		}		
 		return n;
 	}
-
 	
+	public ArrayList<boardVO> search(boardVO vo) {
+		ArrayList<boardVO> list = new ArrayList<>();
+		String sql = "select * from board99 where productName like ?";
+		//String sql2 = "select * from board99 where boardTitle like %?%"; //양옆에 %붙이면 안되고 값줄때 %달아서 와야함
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getProductName());
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				vo = new boardVO();
+				vo.setBoardView(rs.getInt("boardView"));
+				vo.setBoardTitle(rs.getString("boardTitle"));
+				vo.setProductName(rs.getString("productName"));
+				vo.setPrice(rs.getInt("price"));
+				vo.setMemberSiAddress(rs.getString("memberSiAddress"));
+				vo.setMemberGuAddress(rs.getString("memberGuAddress"));
+				vo.setMemberId(rs.getString("memberId"));
+				vo.setBoardDate(rs.getString("boardDate"));
+				vo.setTradeProcess(rs.getString("tradeProcess"));
+				vo.setCategory1(rs.getString("category1"));
+				vo.setCategory2(rs.getString("category2"));
+				vo.setProductImage(rs.getString("productImage"));
+				vo.setProductColor(rs.getString("productColor"));
+				vo.setProductVolume(rs.getInt("productVolume"));
+				list.add(vo);
+			}	
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+	
+	public ArrayList<boardVO> searchCategory1(boardVO vo) {
+		ArrayList<boardVO> list = new ArrayList<>();
+		String sql = "select * from board99 where Category1 = ?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getCategory1());
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				vo = new boardVO();
+				vo.setBoardView(rs.getInt("boardView"));
+				vo.setBoardTitle(rs.getString("boardTitle"));
+				vo.setProductName(rs.getString("productName"));
+				vo.setPrice(rs.getInt("price"));
+				vo.setMemberSiAddress(rs.getString("memberSiAddress"));
+				vo.setMemberGuAddress(rs.getString("memberGuAddress"));
+				vo.setMemberId(rs.getString("memberId"));
+				vo.setBoardDate(rs.getString("boardDate"));
+				vo.setTradeProcess(rs.getString("tradeProcess"));
+				vo.setCategory1(rs.getString("category1"));
+				vo.setCategory2(rs.getString("category2"));
+				vo.setProductImage(rs.getString("productImage"));
+				vo.setProductColor(rs.getString("productColor"));
+				vo.setProductVolume(rs.getInt("productVolume"));
+				list.add(vo);
+			}	
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+	
+	public ArrayList<boardVO> searchCategory2(boardVO vo) {
+		ArrayList<boardVO> list = new ArrayList<>();
+		String sql = "select * from board99 where Category2 = ?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getCategory2());
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				vo = new boardVO();
+				vo.setBoardView(rs.getInt("boardView"));
+				vo.setBoardTitle(rs.getString("boardTitle"));
+				vo.setProductName(rs.getString("productName"));
+				vo.setPrice(rs.getInt("price"));
+				vo.setMemberSiAddress(rs.getString("memberSiAddress"));
+				vo.setMemberGuAddress(rs.getString("memberGuAddress"));
+				vo.setMemberId(rs.getString("memberId"));
+				vo.setBoardDate(rs.getString("boardDate"));
+				vo.setTradeProcess(rs.getString("tradeProcess"));
+				vo.setCategory1(rs.getString("category1"));
+				vo.setCategory2(rs.getString("category2"));
+				vo.setProductImage(rs.getString("productImage"));
+				vo.setProductColor(rs.getString("productColor"));
+				vo.setProductVolume(rs.getInt("productVolume"));
+				list.add(vo);
+			}	
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
 	
 	public int countBoard(int n) {
 		String sql = "select memberid from board99";
@@ -192,6 +323,32 @@ public class boardDAO extends DAO {
 		} 
 		return n;
 	}
+	
+	public int averageCategory2(boardVO vo) {
+		int n = 0;
+		String sql1 = "select Category2 from board99";
+		String sql2 = "select Category2 from board99 where Category2 = ?";
+		double total = 0;
+		double category2 = 0;
+		try {
+			psmt = conn.prepareStatement(sql1);
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				total++;
+			}
+			psmt = conn.prepareStatement(sql2);
+			psmt.setString(1, vo.getCategory2());
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				category2++;
+			}
+			n = (int) (category2/total*100);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return n;
+	}
+	
 	private void close() {
 		try {
 			conn.close();
@@ -203,4 +360,5 @@ public class boardDAO extends DAO {
 		}
 
 	}
+
 }

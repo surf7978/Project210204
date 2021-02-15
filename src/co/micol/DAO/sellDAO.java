@@ -175,6 +175,41 @@ public class sellDAO extends DAO {
 		return n;
 	}
 	
+	public int alertTrade(sellVO vo) {
+		String sql ="select tradeProcess from sell99 WHERE tradeProcess = 'NotComplete' AND memberId = ?";
+		int n = 0;
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getMemberId());
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				n++;
+			}
+			System.out.println(n);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return n;
+	}
+	
+//	public sellVO alertTrade2(sellVO vo) {
+//		String sql ="select BuyDate, BuyMemberId from sell99 WHERE tradeProcess = 'NotComplete' AND memberId = ?";
+//		sellVO vo1 = null;
+//		try {
+//			psmt = conn.prepareStatement(sql);
+//			psmt.setString(1, vo.getMemberId());
+//			rs = psmt.executeQuery();
+//			while(rs.next()) {
+//				vo1 = new sellVO();
+//				vo1.setBuyMemberId(rs.getString("BuyMemberId"));
+//				vo1.setBuyDate(rs.getString("BuyDate"));
+//			}
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//		return vo1;
+//	}
+	
 	private void close() {
 		try {
 			conn.close();
