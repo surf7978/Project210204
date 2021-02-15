@@ -35,7 +35,7 @@ public class memberDAO extends DAO {
 				+ ", MemberSiAddress varchar2(100) not null, MemberGuAddress varchar2(100) not null"
 				+ ", MemberPhoneNumber varchar2(20) not null"
 				+ ", ProductImage varchar2(100) not null"//
-				+ ", ProductVolume number"//
+				+ ", ProductVolume number default 0"//
 				+ ", ProductColor varchar2(100)"//
 				+ ", Category1 varchar2(20)"//
 				+ ", Category2 varchar2(20)"//

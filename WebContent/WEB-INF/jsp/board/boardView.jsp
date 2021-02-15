@@ -69,7 +69,7 @@ textarea {
 									</div>
 									<div class="col-sm-3">
 										<input type="text" class="form-control form-control-user"
-											name="boardView" readonly="readonly" value="${vo.boardView }">
+											name="boardView" style="text-align:center;" readonly="readonly" value="${vo.boardView }">
 									</div>
 								</div>
 							</div>
@@ -92,7 +92,7 @@ textarea {
 												type="text" class="form-control form-control-user"
 												name="tradeProcess" readonly="readonly"
 												value="${vo.tradeProcess }"
-												style="background: white; color: red; border: 0;">
+												style="background: white; color: red; border: 0; ">
 										</span>
 										</span>
 									</div>
@@ -122,7 +122,7 @@ textarea {
 										id="exampleLastName" value="날짜">
 								</div>
 								<div class="col-sm-5">
-									<input type="text" class="form-control form-control-user"
+									<input type="text" class="form-control form-control-user" style="text-align:center;"
 										name="boardDate" readonly="readonly" value="${vo.boardDate }">
 								</div>
 							</div>
@@ -213,7 +213,7 @@ textarea {
 								value="${vo.productColor}">
 						</div>
 
-
+						<!-- 
 						<div class="col-sm-2">
 							<input readonly
 								style="text-align: center; background-color: white; color: #9400d3;"
@@ -234,18 +234,16 @@ textarea {
 								<option value="512">GB</option>
 							</datalist>
 						</div>
-					</div>
+						 -->
 
-					<hr>
 
-					<div class="form-group row">
 						<div class="col-sm-2">
 							<input readonly
 								style="text-align: center; background-color: white; color: #9400d3;"
 								type="text" class="form-control form-control-user"
 								id="exampleLastName" value="가 격">
 						</div>
-						<div class="col-sm-9">
+						<div class="col-sm-4">
 							<input type="text" class="form-control form-control-user"
 								readonly="readonly" name="price" value="${vo.price }">
 						</div>

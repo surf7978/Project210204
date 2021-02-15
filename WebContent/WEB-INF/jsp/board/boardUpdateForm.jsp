@@ -213,6 +213,7 @@ textarea {
 									name="productColor" value="${vos.productColor}">
 							</div>
 						</div>
+						<!-- 
 						<div class="form-group row">
 							<div class="col-sm-2">
 								<input readonly
@@ -235,6 +236,7 @@ textarea {
 								</label>
 							</div>
 						</div>
+						 -->
 						<hr>
 
 						<div class="form-group row">

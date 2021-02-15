@@ -91,7 +91,7 @@ public class boardDAO extends DAO {
 				+ " )"//
 				+ " VALUES (?,?,?,?"
 				+ ",?,?,?,?,?"
-				+ ",?,?,?,?)";
+				+ ", 0,?,?,?)";
 		
 		String sql2="INSERT INTO product99"//
 				+ " (productName, category1, category2)"//
@@ -110,10 +110,10 @@ public class boardDAO extends DAO {
 			psmt.setString(8, vo.getMemberPhoneNumber());
 			psmt.setString(9, vo.getProductImage());
 			
-			psmt.setInt(10, vo.getProductVolume());
-			psmt.setString(11, vo.getProductColor());
-			psmt.setString(12, vo.getCategory1());
-			psmt.setString(13, vo.getCategory2());
+			//psmt.setInt(10, vo.getProductVolume());
+			psmt.setString(10, vo.getProductColor());
+			psmt.setString(11, vo.getCategory1());
+			psmt.setString(12, vo.getCategory2());
 			n = psmt.executeUpdate();
 			
 			

@@ -37,7 +37,7 @@ setInterval(function(){
 									<li class="w3-xlarge w3-padding-32" style="background:#fff;height:500px;overflow:hidden;line-height: 500px;margin:0;padding:0;padding-top:0!important;"><img src="image/${vo.productImage }" style="width:100%;"></li>
 									<li class="w3-padding-16">${vo.boardTitle }</li>
 									<li class="w3-padding-16">${vo.category1 } > ${vo.category2 } > ${vo.productName }</li>
-									<li class="w3-padding-16">용량: ${vo.productVolume } GB / 
+									<li class="w3-padding-16"> <!-- 용량: ${vo.productVolume } GB / --> 
 															  색상: ${vo.productColor }</li>
 									<li class="w3-padding-16">가격: ${vo.price }</li>
 									<li class="w3-padding-16">조회수: ${vo.boardView }</li>

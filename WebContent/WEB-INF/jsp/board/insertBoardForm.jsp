@@ -38,9 +38,9 @@
 								<hr>
 								<div class="form-group row">
 									<div class="col-sm-4">
-										<input type="text" class="form-control form-control-user" style="background-color:white; text-align:center; color: #9400d3;"
-											readonly placeholder="주 소">
-									</div>
+                                        <input readonly style="text-align:center; background-color:white; color:#9400d3;" type="text" class="form-control form-control-user"
+                                            value="지 역">
+                                    </div>
 									<div class="col-sm-4">
 									<label>
 										<input type="text" class="form-control form-control-user"
@@ -73,8 +73,8 @@
 								</div>
 								<div class="form-group row">
 									<div class="col-sm-4">
-										<input type="text" class="form-control form-control-user" style="background-color:white; text-align:center; color: #9400d3;"
-											readonly placeholder="연 락 처">
+										<input readonly style="text-align:center; background-color:white; color:#9400d3;" type="text" class="form-control form-control-user" 
+										 value="연 락 처">
 									</div>
 									<div class="col-sm-8">
 										<input type="text" class="form-control form-control-user"
@@ -85,7 +85,7 @@
 								<div class="form-group row">
 									<div class="col-sm-4">
 										<input type="text" class="form-control form-control-user" style="background-color:white; text-align:center; color: #9400d3;"
-											readonly placeholder="분 류">
+											readonly value="분 류">
 									</div>
 									<div class="col-sm-3">
 										<input type="text" class="form-control form-control-user"
@@ -103,7 +103,7 @@
 								<div class="form-group row">
 									<div class="col-sm-4">
 										<input type="text" class="form-control form-control-user" style="background-color:white; text-align:center; color: #9400d3;"
-											readonly placeholder="품 명">
+											readonly value="품 명">
 									</div>
 									<div class="col-sm-6">
 										<input type="text" class="form-control form-control-user"
@@ -114,7 +114,7 @@
 									<div class="col-sm-4">
 									<input type="text" class="form-control form-control-user"
 										readonly style="background-color:white; text-align:center; color: #9400d3;"
-										placeholder="색 상">
+										value="색 상">
 									</div>
 									<div class="col-sm-6">
 									<input type="text" class="form-control form-control-user"
@@ -123,11 +123,12 @@
 									</div>
 									
 								</div>
+								<!-- 
 								<div class="form-group row">
 									<div class="col-sm-4">
 									<input type="text" class="form-control form-control-user"
 										readonly style="background-color:white; text-align:center; color: #9400d3;"
-										placeholder="용량">
+										value="용량">
 									</div>
 									<div class="col-sm-6">
 									<input type="text" class="form-control form-control-user"
@@ -143,12 +144,13 @@
 									</datalist>
 									</div>
 								</div>
+								 -->
 								<hr>
 
 								<div class="form-group row">
 									<div class="col-sm-4">
 										<input type="text" class="form-control form-control-user"
-											readonly placeholder="판매가격" style="background-color:white; text-align:center; color: #9400d3;">
+											readonly value="판매가격" style="background-color:white; text-align:center; color: #9400d3;">
 									</div>
 									<div class="col-sm-6">
 										<input type="text" class="form-control form-control-user"
