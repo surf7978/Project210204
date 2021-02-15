@@ -253,7 +253,7 @@ textarea {
 						<div>
 							<!-- FileUpLoad 서블릿 실행 -->
 								<input type="file" class="form-control" style="padding-bottom:35px;"
-											id="productImage1"><br> 
+											id="productImage1" name="productImage1"><br> 
 										<p>
 										<input type="hidden" class="form-control" style="padding-bottom:35px;"
 											id="productImage" name="productImage">
@@ -336,15 +336,15 @@ textarea {
 
 
 <script type="text/javascript">
-	function updateAlert(str) {
-		location.href = "UpdateBoard.do?boardDate=" + str;
-	}
 	function imageUpload(){
-		productImage.value = productImage1.value.substr(productImage1.value.lastIndexOf("\\")+1); 
-		//이미지명 잘라주기 위한 것 + substr(시작, 끝)끝에 아무것도 안적으면 끝까지 가져옴
-		console.log(productImage.value);
-		productImage.value.submit();
-		return true;
+		let YnN = confirm("수정할까요?");
+		if(YnN){
+			productImage.value = productImage1.value.substr(productImage1.value.lastIndexOf("\\")+1); 
+			//이미지명 잘라주기 위한 것 + substr(시작, 끝)끝에 아무것도 안적으면 끝까지 가져옴
+			console.log(productImage.value);
+			productImage.value.submit();
+			return false;
+		}
 	}
 </script>
 </body>
