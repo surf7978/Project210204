@@ -32,8 +32,6 @@ public class sellDAO extends DAO {
 			}			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
-			close();
 		}
 		return list;
 	}
@@ -103,9 +101,7 @@ public class sellDAO extends DAO {
 			System.out.println(n);
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close();
-		}		
+		} 	
 		return n;
 	}
 	
@@ -126,9 +122,7 @@ public class sellDAO extends DAO {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close();
-		}
+		} 
 	}
 ////삭제
 //	public int delete(sellVO vo) {

@@ -36,8 +36,6 @@ public class buyDAO extends DAO {
 			}			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
-			close();
 		}
 		return list;
 	}
@@ -66,8 +64,6 @@ public class buyDAO extends DAO {
 			}			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
-			close();
 		}
 		return list;
 	}
@@ -118,9 +114,7 @@ public class buyDAO extends DAO {
 			System.out.println(n);
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close();
-		}		
+		} 		
 		return n;
 	}
 //	

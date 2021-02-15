@@ -30,9 +30,7 @@ public class productDAO extends DAO {
 			}
 
 		} catch (Exception e) {
-		} finally {
-			close();
-		}
+		} 
 
 		return list;
 
@@ -52,9 +50,7 @@ public class productDAO extends DAO {
 				vo.setCategory2(rs.getString("Category2"));
 			}
 		} catch (Exception e) {
-		} finally {
-			close();
-		}
+		} 
 		return vo;
 	}
 
@@ -73,8 +69,6 @@ public class productDAO extends DAO {
 			n = psmt.executeUpdate();
 			System.out.println(n + "건 등록.");
 		} catch (Exception e) {
-		} finally {
-			close();
 		}
 
 		return n;
@@ -95,9 +89,7 @@ public class productDAO extends DAO {
 			n = psmt.executeUpdate();
 			System.out.println(n + "건 업데이트.");
 		} catch (Exception e) {
-		} finally {
-			close();
-		}
+		} 
 		return n;
 	}
 
@@ -112,9 +104,7 @@ public class productDAO extends DAO {
 			n = psmt.executeUpdate();
 			System.out.println(n + "건 삭제.");
 		} catch (Exception e) {
-		} finally {
-			close();
-		}
+		} 
 		return n;
 	}
 

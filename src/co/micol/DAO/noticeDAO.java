@@ -32,8 +32,6 @@ public class noticeDAO extends DAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}finally {
-			close();
 		}
 		return list;
 	}
@@ -55,8 +53,6 @@ public class noticeDAO extends DAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}finally {
-			close();
 		}
 		
 		return vo;
@@ -74,8 +70,6 @@ public class noticeDAO extends DAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}finally {
-			close();
 		}		
 		return n;	
 	}
@@ -95,8 +89,6 @@ public class noticeDAO extends DAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}finally {
-			close();
 		}	
 		return n;
 	}
@@ -111,8 +103,6 @@ public class noticeDAO extends DAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}finally {
-			close();
 		}	
 		return n;
 	}

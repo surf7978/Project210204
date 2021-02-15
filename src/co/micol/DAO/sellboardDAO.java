@@ -40,9 +40,6 @@ public class sellboardDAO extends DAO {
 		} catch (Exception e) {
 			 e.printStackTrace();
 		}
-			finally {
-			close();
-		}
 		return list;
 	}
 
@@ -68,10 +65,7 @@ public class sellboardDAO extends DAO {
 			}
 		} catch (Exception e) {
 			 e.printStackTrace();
-		} finally {
-			close();
-		}
-
+		} 
 		return vo;
 	}
 
@@ -97,9 +91,7 @@ public class sellboardDAO extends DAO {
 			System.out.println(n + "건 등록완료");
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close();
-		}
+		} 
 		return n;
 	}
 
@@ -125,9 +117,7 @@ public class sellboardDAO extends DAO {
 			System.out.println(n + "건 수정");
 		} catch (Exception e) {
 			 e.printStackTrace();
-		} finally {
-			close();
-		}
+		} 
 
 		return n;
 	}
@@ -143,9 +133,7 @@ public class sellboardDAO extends DAO {
 			System.out.println(n + "건이 삭제");
 		} catch (Exception e) {
 			 e.printStackTrace();
-		} finally {
-			close();
-		}
+		} 
 		return n;
 	}
 

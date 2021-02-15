@@ -40,8 +40,6 @@ public class boardDAO extends DAO {
 			}			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
-			close();
 		}
 		return list;
 	}
@@ -74,9 +72,7 @@ public class boardDAO extends DAO {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close();
-		}
+		} 
 		
 		return vo;
 	}
@@ -124,9 +120,7 @@ public class boardDAO extends DAO {
 			n = psmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close();
-		}		
+		} 		
 		return n;
 	}
 
@@ -138,8 +132,6 @@ public class boardDAO extends DAO {
 			psmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}finally {
-			close();
 		}
 	}
 	
@@ -179,9 +171,7 @@ public class boardDAO extends DAO {
 			n = psmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close();
-		}
+		} 
 		return n;
 	}
 	
@@ -194,8 +184,6 @@ public class boardDAO extends DAO {
 			psmt.setString(1, vo.getBoardDate());
 			n = psmt.executeUpdate();
 		} catch (Exception e) {
-		} finally {
-			close();
 		}		
 		return n;
 	}

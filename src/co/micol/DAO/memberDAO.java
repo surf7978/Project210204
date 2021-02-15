@@ -249,8 +249,6 @@ public class memberDAO extends DAO {
 			psmt.executeQuery();
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}finally {
-			close();
 		}
 	}
 	
@@ -285,8 +283,6 @@ public class memberDAO extends DAO {
 			psmt.executeQuery();
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}finally {
-			close();
 		}
 	}
 	
@@ -311,8 +307,6 @@ public class memberDAO extends DAO {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close();
 		}
 		return list;
 	}
@@ -388,8 +382,6 @@ public class memberDAO extends DAO {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close();
 		}
 		return vo;
 	}
@@ -412,8 +404,6 @@ public class memberDAO extends DAO {
 			psmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close();
 		}
 	}
 
@@ -433,8 +423,6 @@ public class memberDAO extends DAO {
 			psmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close();
 		}
 	}
 
@@ -447,9 +435,7 @@ public class memberDAO extends DAO {
 			psmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close();
-		}
+		} 
 	}
 
 	//아이디채크
@@ -467,9 +453,7 @@ public class memberDAO extends DAO {
 			} catch (SQLException e) {
 				e.printStackTrace();
 				System.out.println("아이디 중복확인 실패");
-			} finally {
-				close();
-			}
+			} 
 			return cnt;
 		}
 

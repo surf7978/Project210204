@@ -30,8 +30,6 @@ public class commentDAO extends DAO {
 			}			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
-			close();
 		}
 		return list;
 	}
@@ -54,9 +52,7 @@ public class commentDAO extends DAO {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close();
-		}
+		} 
 		return list;
 	}
 
@@ -75,8 +71,6 @@ public class commentDAO extends DAO {
 			n = psmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close();
 		}		
 		return n;
 	}

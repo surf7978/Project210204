@@ -36,8 +36,6 @@ public class cartDAO extends DAO {
 			}			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
-			close();
 		}
 		return list;
 	}
@@ -66,8 +64,6 @@ public class cartDAO extends DAO {
 			}			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
-			close();
 		}
 		return list;
 	}
