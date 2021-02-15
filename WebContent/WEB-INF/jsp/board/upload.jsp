@@ -13,5 +13,4 @@ pageEncoding="EUC-KR"%>
 <body> 
 </body> 
 </html>
-[출처] JSP 이미지 및 파일 업로드 |작성자 뜻깊은 태클
 

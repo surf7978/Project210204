@@ -43,11 +43,11 @@ function insert(){
 				<table class="table table-bordered" id="dataTable" width="100%"
 						cellspacing="0">
 					<tr>
-						<th>TITLE </th>
+						<th>제목 </th>
 						<td><input type="text" id="nTitle" name="nTitle" style="border:1;width:100%;"/></td>
 					</tr>
 					<tr>
-						<th>CONTENT</th>
+						<th>내용</th>
 						<td colspan="5"><textarea rows="20"style="width: 100%; max-width: 100%;" name="nContent" id="nContent"></textarea></td>
 					</tr>
 				</table>

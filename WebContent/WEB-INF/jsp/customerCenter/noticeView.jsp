@@ -28,8 +28,7 @@
 		<!-- DataTales Example -->
 		<div class="card shadow mb-4">
 			<div class="card-header py-3">
-				<h6 class="m-0 font-weight-bold text-primary">DataTables
-					Example</h6>
+				<h6 class="m-0 font-weight-bold text-primary">쪽지</h6>
 			</div>
 			<form id="frm" name="frm" method="post">
 		<input type="hidden" id="nNumber" name="nNumber" value="${vo.nNumber }" />
@@ -40,17 +39,17 @@
 					<tr>
 						<th>NO </th>
 						<td>${vo.nNumber }</td>
-						<th>NAME </th>
+						<th>작성자 </th>
 						<td>${vo.nWriter }</td>
-						<th>DATE </th>
+						<th>보낸날짜 </th>
 						<td><input readonly style="border:0; color:gray;" name="nDate" type="text" value="${vo.nDate }"></td>
 					</tr>
 					<tr>
-						<th>TITLE</th>
+						<th>제목</th>
 						<td colspan="5">${vo.nTitle}</td>
 					</tr>
 					<tr>
-						<th>CONTENT</th>
+						<th>내용</th>
 						<td colspan="5"><textarea style="resize:none; border:0; color:gray;" rows="20" cols="100" style="border:none;" readonly="readonly">${vo.nContent }</textarea></td>
 					</tr>
 				</table>
