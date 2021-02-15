@@ -26,7 +26,7 @@ public class UpdateBoard implements Command {
 		vo.setCategory2(request.getParameter("category2"));
 		
 		vo.setProductColor(request.getParameter("productColor"));
-		vo.setProductVolume(Integer.parseInt(request.getParameter("productVolume")));
+		vo.setProductVolume(0);
 		
 		System.out.println(vo.toString());
 		

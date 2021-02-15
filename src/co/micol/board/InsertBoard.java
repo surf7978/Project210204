@@ -29,7 +29,7 @@ public class InsertBoard implements Command {
 		
 		vo.setProductImage(request.getParameter("productImage"));
 		vo.setProductColor(request.getParameter("productColor"));
-		vo.setProductVolume(Integer.parseInt(request.getParameter("productVolume")));
+		vo.setProductVolume(0);
 		
 		System.out.println(vo.toString());
 		
