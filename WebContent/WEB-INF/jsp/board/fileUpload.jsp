@@ -7,7 +7,7 @@
 </head>
 <body>
 <div align="center">
-      <form action="FileUpload"  method="post" enctype="multipart/form-data">				<!-- FileUpLoad 서블릿 실행 -->
+      <form action="FileUpload2"  method="post" enctype="multipart/form-data">				<!-- FileUpLoad 서블릿 실행 -->
 		<table border="1">
 
 		<tr><th> <input type="file" name="file2"></th></tr>

@@ -2,7 +2,36 @@
     pageEncoding="UTF-8"%>
     
 <jsp:include page="../main/main.jsp" />
-
+<style>
+	.panel {
+  padding: 0 28px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;line-height:40px;
+}
+.accordion2 {
+  background-color: #fff;
+  color: #444;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  border: 0;
+  outline:0;
+}
+.accordion2:active{
+  border: 0;
+  outline:0;
+  }
+ .accordion2:visited {
+  border: 0;
+  outline:0;
+}
+</style>
 <div id="wrapper">
 
 	<!-- Begin Page Content -->
@@ -27,13 +56,11 @@
 							<tr>
 								<th>
 								<div class="nav-item">
-                					<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-				                		<span style="color:black;">Q1. 비밀번호를 잊어버렸어요.</span>
-            						</a>
-            						<div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                						<div class="bg-white py-2 collapse-inner rounded">
-                    						<a class="collapse-item" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A1. 새로가입 ㄱㄱ</a>
-                						</div>
+                					<button class="accordion2">
+				                		<span>Q1. 비밀번호를 잊어버렸어요.</span>
+            						</button>
+            						<div class="panel">
+                    						<p>A1. 새로가입 ㄱㄱ</p>
             						</div>
         						</div>
         						</th>
@@ -41,13 +68,11 @@
         					<tr>
         						<th>
 								<div class="nav-item">
-                					<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-				                		<span style="color:black;">Q2. 판매자에게 사기를 당했어요.</span>
-            						</a>
-            						<div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                						<div class="bg-white py-2 collapse-inner rounded">
-                    						<a class="collapse-item" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A2. 신고 ㄱㄱ</a>
-                						</div>
+                					<button class="accordion2">
+				                		<span>Q2. 판매자에게 사기를 당했어요.</span>
+            						</button>
+            						<div class="panel">
+                    						<p>A2. 신고 ㄱㄱ</p>
             						</div>
         						</div>
         						</th>
@@ -55,13 +80,11 @@
         					<tr>
         						<th>
 								<div class="nav-item">
-                					<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-				                		<span style="color:black;">Q3. 회원탈퇴를 하고싶어요.</span>
-            						</a>
-            						<div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                						<div class="bg-white py-2 collapse-inner rounded">
-                    						<a class="collapse-item" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A3. 안해줌^^</a>
-                						</div>
+                					<button class="accordion2">
+				                		<span>Q3. 회원탈퇴를 하고싶어요.</span>
+            						</button>
+            						<div class="panel">
+                    						<p>A3. 안해줌^^</p>
             						</div>
         						</div>
         						</th>
@@ -75,8 +98,24 @@
 		</div>
 
 	</div>
-	<!-- /.container-fluid -->
+<script>
+var acc = document.getElementsByClassName("accordion2");
+var i;
 
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	<!-- /.container-fluid -->
+</div>
 </div>
 
             <!-- Footer -->
